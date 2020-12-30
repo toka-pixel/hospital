@@ -1,0 +1,13 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 30 Dec 2020 18:22:50 at https://www.konnectplugins.com/proclinic/Vertical/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.konnectplugins.com/proclinic/Vertical/ -O1 "C:\My Web Sites\dashBoard admin" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:22:52	Warning: 	Note: due to https://www.konnectplugins.com remote robots.txt rules, links beginning with these path will be forbidden: /wp-admin/ (see in the options to disable this)
+18:24:30	Warning: 	File not parsed, looks like binary: https://www.konnectplugins.com/proclinic/Vertical/fonts/fontawesome-webfont.woff2?v=4.7.0
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 47 seconds : 101 links scanned, 100 files written (4252409 bytes overall) [3284888 bytes received at 30699 bytes/sec], 1170512 bytes transferred using HTTP compression in 47 files, ratio 14%, 2.8 requests per connection
+(No errors, 2 warnings, 0 messages)
