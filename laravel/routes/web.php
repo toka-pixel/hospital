@@ -35,3 +35,8 @@ Route::get('/contact', function () {
     return view('proclinic.contact');
 });
 
+Route::get('/doctorProfile', function () {
+    return view('proclinic.doctorProfile');
+});
+
+

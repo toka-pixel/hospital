@@ -448,7 +448,7 @@ Tilt table test.</p>
 <div class="img align-self-stretch" style="background-image: url(proclinic/images/doc-1.jpg);"></div>
 </div>
 <div class="text pt-3 text-center">
-<h3><a href="doctorProfile.html">Dr. Lloyd Wilson</a></h3>
+<h3><a href="/doctorProfile">Dr. Lloyd Wilson</a></h3>
 <span class="position mb-2">Neurologist</span>
 <div class="faded">
 <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
@@ -463,7 +463,7 @@ Tilt table test.</p>
 <div class="img align-self-stretch" style="background-image: url(proclinic/images/doc-2.jpg);"></div>
 </div>
 <div class="text pt-3 text-center">
-<h3><a href='doctorProfile.html'>Dr. Rachel Parker</a></h3>
+<h3><a href='/doctorProfile'>Dr. Rachel Parker</a></h3>
 <span class="position mb-2">Ophthalmologist</span>
 <div class="faded">
 <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
@@ -478,7 +478,7 @@ Tilt table test.</p>
 <div class="img align-self-stretch" style="background-image: url(proclinic/images/doc-3.jpg);"></div>
 </div>
 <div class="text pt-3 text-center">
-<h3><a href="doctorProfile.html">Dr. Ian Smith</a></h3>
+<h3><a href="/doctorProfile">Dr. Ian Smith</a></h3>
 <span class="position mb-2">Dentist</span>
 <div class="faded">
 <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
@@ -493,7 +493,7 @@ Tilt table test.</p>
 <div class="img align-self-stretch" style="background-image: url(proclinic/images/doc-4.jpg);"></div>
 </div>
 <div class="text pt-3 text-center">
-<h3><a href ='doctorProfile.html'>Dr. Alicia Henderson</a></h3>
+<h3><a href ='/doctorProfile'>Dr. Alicia Henderson</a></h3>
 <span class="position mb-2">Pediatrician</span>
 <div class="faded">
 <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
