@@ -25,7 +25,7 @@
 <div class="container">
 <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
 <div class="col-lg-2 pr-4 align-items-center">
-<a class="navbar-brand" href="index-2.html">
+<a class="navbar-brand" href="">
 	<img width="90%"src="proclinic/images/logo-dark.png" class="logo" alt="logo">
 </a>
 </div>
@@ -50,14 +50,15 @@
 </nav>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
 <div class="container d-flex align-items-center">
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+ aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 <span class="oi oi-menu"></span> Menu
 </button>
-<p class="button-custom order-lg-last mb-0"><a href="appointment.html" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
+<p class="button-custom order-lg-last mb-0"><a href="/appointment" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
 <div class="collapse navbar-collapse" id="ftco-nav">
 <ul class="navbar-nav mr-auto">
 <li class="nav-item active"><a href="ProclinicHome"  class="nav-link pl-0">Home</a></li>
-<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+<li class="nav-item"><a href="/about" class="nav-link">About</a></li>
 <li class="nav-item"><a href="/doctor" class="nav-link">Doctor</a></li>
 <li class="nav-item"><a href="/departments" class="nav-link">Departments</a></li>
 
@@ -128,7 +129,7 @@
 <div class="ftco-footer-widget mb-5">
 <h2 class="ftco-heading-2">Recent Blog</h2>
 <div class="block-21 mb-4 d-flex">
-<a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+<a class="blog-img mr-4" style="background-image: url(proclinic/images/image_1.jpg);"></a>
 <div class="text">
 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 <div class="meta">
@@ -139,7 +140,7 @@
 </div>
 </div>
 <div class="block-21 mb-5 d-flex">
-<a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+<a class="blog-img mr-4" style="background-image: url(proclinic/images/image_2.jpg);"></a>
 <div class="text">
 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 <div class="meta">
