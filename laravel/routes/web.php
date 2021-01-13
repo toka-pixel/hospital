@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// //////// proclinic //////////////
 Route::get('/', function () {
     return view('proclinic.home');
 });
@@ -34,9 +36,23 @@ Route::get('/blogs', function () {
 Route::get('/contact', function () {
     return view('proclinic.contact');
 });
+Route::get('/about', function () {
+    return view('proclinic.about');
+});
+Route::get('/appointment', function () {
+    return view('proclinic.appointment');
+});
 
 Route::get('/doctorProfile', function () {
     return view('proclinic.doctorProfile');
+});
+
+
+
+//////////// control //////////////////
+
+Route::get('/contro', function () {
+    return view('control.home');
 });
 
 
