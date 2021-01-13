@@ -26,6 +26,11 @@
 <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
 <div class="col-lg-2 pr-4 align-items-center">
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 9782c62365f8fbc7ed1feec309b91435ebb9edcd
 <a class="navbar-brand" href="/">
 
 	<img width="90%"src="proclinic/images/logo-dark.png" class="logo" alt="logo">
