@@ -25,4 +25,13 @@ Route::get('/ProclinicHome', function () {
 Route::get('/doctor', function () {
     return view('proclinic.doctor');
 });
+Route::get('/departments', function () {
+    return view('proclinic.departments');
+});
+Route::get('/blogs', function () {
+    return view('proclinic.blog');
+});
+Route::get('/contact', function () {
+    return view('proclinic.contact');
+});
 
