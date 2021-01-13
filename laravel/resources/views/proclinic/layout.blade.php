@@ -26,11 +26,7 @@
 <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
 <div class="col-lg-2 pr-4 align-items-center">
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 9782c62365f8fbc7ed1feec309b91435ebb9edcd
 <a class="navbar-brand" href="/">
 
 	<img width="90%"src="proclinic/images/logo-dark.png" class="logo" alt="logo">
@@ -114,11 +110,12 @@
 <div class="ftco-footer-widget mb-5 ml-md-4">
 <h2 class="ftco-heading-2">Links</h2>
 <ul class="list-unstyled">
-<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-<li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
-<li><a href="department.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
-<li><a href="department.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Deparments</a></li>
-<li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+<li><a href="/"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+<li><a href="/about"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+<li><a href="/doctor"><span class="ion-ios-arrow-round-forward mr-2"></span>Doctor</a></li>
+<li><a href="/departments"><span class="ion-ios-arrow-round-forward mr-2"></span>Deparments</a></li>
+<li><a href="/blogs"><span class="ion-ios-arrow-round-forward mr-2"></span>Blog</a></li>
+<li><a href="/contact"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
 </ul>
 </div>
 <div class="ftco-footer-widget mb-5 ml-md-4">

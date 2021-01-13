@@ -11,7 +11,7 @@
 <div class="col-md-6 text ftco-animate">
 <h1 class="mb-4">Helping Your <span>Stay Happy One</span></h1>
 <h3 class="subheading">Everyday We Bring Hope and Smile to the Patient We Serve</h3>
-<p><a href="" class="btn btn-secondary px-4 py-3 mt-3">View our works</a></p>
+<p><a href="/about" class="btn btn-secondary px-4 py-3 mt-3">View our works</a></p>
 </div>
 </div>
 </div>
@@ -23,7 +23,7 @@
 <div class="col-md-6 text ftco-animate">
 <h1 class="mb-4">We Care <span>About Your Health</span></h1>
 <h3 class="subheading">Your Health is Our Top Priority with Comprehensive, Affordable medical.</h3>
-<p><a href="about.html" class="btn btn-secondary px-4 py-3 mt-3">View our works</a></p>
+<p><a href="/about" class="btn btn-secondary px-4 py-3 mt-3">View our works</a></p>
 </div>
 </div>
 </div>
@@ -146,7 +146,7 @@
 <p></p>
 </div>
 <div class="col-md-3 d-flex align-items-center">
-<p class="mb-0"><a href="appointment.html" class="btn btn-secondary px-4 py-3">Free Consutation</a></p>
+<p class="mb-0"><a href="/appointment" class="btn btn-secondary px-4 py-3">Free Consutation</a></p>
 </div>
 </div>
 </div>
@@ -274,7 +274,7 @@
 <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-day-3-tab">
 <div class="row departments">
 <div class="col-lg-4 order-lg-last d-flex align-items-stretch">
-<div class="img d-flex align-self-stretch" style="proclinic/background-image: url(images/dept-3.jpg);"></div>
+<div class="img d-flex align-self-stretch" style="background-image: url(proclinic/images/dept-3.jpg);"></div>
 </div>
 <div class="col-md-8">
 <h2>Dental Deparments</h2>
@@ -323,7 +323,7 @@
 <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-day-4-tab">
 <div class="row departments">
 <div class="col-lg-4 order-lg-last d-flex align-items-stretch">
-<div class="img d-flex align-self-stretch" style="proclinic/background-image: url(images/dept-4.jpg);"></div>
+<div class="img d-flex align-self-stretch" style="background-image: url(proclinic/images/dept-4.jpg);"></div>
 </div>
 <div class="col-md-8">
 <h2>Ophthalmology Deparments</h2>
