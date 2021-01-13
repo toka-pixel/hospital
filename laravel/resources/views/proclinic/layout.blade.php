@@ -25,11 +25,9 @@
 <div class="container">
 <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
 <div class="col-lg-2 pr-4 align-items-center">
-<<<<<<< HEAD
-<a class="navbar-brand" href="">
-=======
+
 <a class="navbar-brand" href="/">
->>>>>>> 89fa5976c1cee4a2d234e7a1231eea0ffbbae0ae
+
 	<img width="90%"src="proclinic/images/logo-dark.png" class="logo" alt="logo">
 </a>
 </div>
