@@ -22,3 +22,7 @@ Route::get('/ProclinicHome', function () {
     return view('proclinic.home');
 });
 
+Route::get('/doctor', function () {
+    return view('proclinic.doctor');
+});
+

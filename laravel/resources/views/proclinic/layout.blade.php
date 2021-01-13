@@ -58,7 +58,7 @@
 <ul class="navbar-nav mr-auto">
 <li class="nav-item active"><a href="ProclinicHome"  class="nav-link pl-0">Home</a></li>
 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-<li class="nav-item"><a href="doctor.html" class="nav-link">Doctor</a></li>
+<li class="nav-item"><a href="/doctor" class="nav-link">Doctor</a></li>
 <li class="nav-item"><a href="department.html" class="nav-link">Departments</a></li>
 
 <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
