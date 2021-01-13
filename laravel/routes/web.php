@@ -41,3 +41,8 @@ Route::get('/appointment', function () {
     return view('proclinic.appointment');
 });
 
+Route::get('/doctorProfile', function () {
+    return view('proclinic.doctorProfile');
+});
+
+
