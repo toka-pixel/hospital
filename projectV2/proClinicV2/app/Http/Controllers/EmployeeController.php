@@ -199,8 +199,7 @@ class EmployeeController extends Controller
         }
     }
     
-<<<<<<< HEAD
+
     
-=======
->>>>>>> 20ad16352f72700940227210e965bfa1f9d20fe0
+
 }

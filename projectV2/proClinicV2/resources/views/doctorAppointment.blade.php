@@ -1,4 +1,4 @@
-@extends('control.layout')
+@extends('control.layoutDoctor2')
 
 
 @section('home')

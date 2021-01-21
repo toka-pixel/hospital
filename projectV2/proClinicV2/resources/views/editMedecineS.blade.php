@@ -1,4 +1,4 @@
-@extends('control.layoutedit')
+@extends('control.layoutDoctor')
 @section("edit&show")
 <!-- Page Title -->
 <div class="row no-margin-padding">
