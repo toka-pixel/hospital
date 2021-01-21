@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +22,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-
-
 // //////// proclinic //////////////
 Route::get('/', function () {
-    
-
     return view('proclinic.home');
 });
 
@@ -67,25 +63,20 @@ Route::get('/contro', function () {
     return view('control.home');
 });
 
-
-
-
-
-
-
-
-// //////////////////////////////
-
-use App\Http\Controllers;
-Route::resource("patients",Controllers\PatientController::class);
-
+//resource controller for employee
 Route::resource("employees",Controllers\EmployeeController::class);
-
+Route::resource("patients",Controllers\PatientController::class);
 Route::resource("appointments",Controllers\AppointmentController::class);
-
 Route::resource("books",Controllers\BookController::class);
-
 Route::resource("emppatients",Controllers\EmppatientController::class);
+//login Admin
+Route::get('/loginEmp', function () {
+    return view('loginEmp');
+});
+Route::post("/loginEmp",[App\Http\Controllers\EmployeeController::class,'loginEmp']);
+Route::get('/editMedicine/{id}',[App\Http\Controllers\EmppatientController::class,'edit'] )->name('editMedecine');
+
+
 
 
 
@@ -115,7 +106,7 @@ Route::post("/signup",[App\Http\Controllers\PatientController::class,'signup']);
 
 // ////////  display employees of one department ////////
 
- Route::get('DoctorsOfDepartment','App\Http\Controllers\AppointmentController@docofdepartment');
+Route::get('DoctorsOfDepartment','App\Http\Controllers\AppointmentController@docofdepartment');
 
 
 ////////  ShowProfileDoctor //////////////////
@@ -125,5 +116,4 @@ Route::get("/doctorprofile/{id}",[App\Http\Controllers\EmployeeController::class
 // ////// Add Appointment From Admin /////////////
 
 Route::get("/AppFromAdmin",[App\Http\Controllers\AppointmentController::class,'AddAppointmentFromAdmin'])->name('AppFromAdmin');
-
 

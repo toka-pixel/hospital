@@ -10,8 +10,13 @@ class Department extends Model
     use HasFactory;
     protected $table='department';
 
+
     public function employee(){
 
         return  $this->hasMany(Employee::class);
     }
+
+    protected $primaryKey = 'depid';
+    protected $guarded;
+
 }

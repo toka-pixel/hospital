@@ -10,25 +10,30 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>ProClinic-Bootstrap4 Hospital Admin</title>
 	<!-- Fav  Icon Link -->
-	<link rel="shortcut icon" type="../control/image/png" href="../control/images/fav.png">
+
+	<link rel="shortcut icon" type="../../control/image/png" href="../../control/images/fav.png">
+
+	<link rel="shortcut icon" type="../../control/image/png" href="images/fav.png">
+
 	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="../control/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../control/css/bootstrap.min.css">
 	<!-- themify icons CSS -->
-	<link rel="stylesheet" href="../control/css/themify-icons.css">
+	<link rel="stylesheet" href="../../control/css/themify-icons.css">
 	<!-- Animations CSS -->
-	<link rel="stylesheet" href="../control/css/animate.css">
+	<link rel="stylesheet" href="../../control/css/animate.css">
 	<!-- Main CSS -->
-	<link rel="stylesheet" href="../control/css/styles.css">
+	<link rel="stylesheet" href="../../control/css/styles.css">
 
 
-	<link rel="stylesheet" href="../control/css/red.css" id="style_theme">
-	<link rel="stylesheet" href="../control/css/responsive.css">
+
+	<link rel="stylesheet" href="../../control/css/red.css" id="style_theme">
+	<link rel="stylesheet" href="../../control/css/responsive.css">
 	<!-- morris charts -->
-	<link rel="stylesheet" href="../control/charts/css/morris.css">
+	<link rel="stylesheet" href="../../control/charts/css/morris.css">
 	<!-- jvectormap -->
-	<link rel="stylesheet" href="../control/css/jquery-jvectormap.css">
+	<link rel="stylesheet" href="../../control/css/jquery-jvectormap.css">
 
-	<script src="../control/js/modernizr.min.js"></script>
+	<script src="../../control/js/modernizr.min.js"></script>
 </head>
 
 <body>
@@ -39,6 +44,7 @@
 			<div class="double-bounce2"></div>
 		</div>
 	</div>
+
 	<!--/Pre Loader -->
 	<!-- Color Changer -->
 	<!-- <div class="theme-settings" id="switcher">
@@ -52,11 +58,16 @@
 		<span class="theme-color theme-yellow" data-color="yellow"></span>
 	</div> -->
 	<!-- /Color Changer -->
+
 	<div class="wrapper">
 		<!-- Sidebar -->
 		<nav id="sidebar" class="proclinic-bg">
 			<div class="sidebar-header">
-				<a href="/contro"><img src="../control/images/logo.png" class="logo" alt="logo"></a>
+
+				<a href="/contro"><img src="../../control/images/logo.png" class="logo" alt="logo"></a>
+
+				
+
 			</div>
 			<ul class="list-unstyled components">
 				<li class="active">
@@ -65,7 +76,11 @@
 					</a>
 					<ul class="collapse list-unstyled show" id="nav-dashboard">
 						<li>
-							<a href="/contro">Vertical</a>
+
+							
+
+							<a href="/../../control">Vertical</a>
+
 						</li>
 						
 					</ul>
@@ -76,12 +91,14 @@
 					</a>
 					<ul class="collapse list-unstyled" id="nav-patients">
 						<li>
+
 							<a href="/patients/create">Add Patient</a>
 						</li>
-						<li>
-							<a href="/patients">All Patients</a>
-						</li>
 						
+						<li>
+							<a href="/employees">All Patients</a>
+
+						</li>
 						
 					</ul>
 				</li>
@@ -90,11 +107,15 @@
 						<span class="ti-user"></span> Doctors
 					</a>
 					<ul class="collapse list-unstyled" id="nav-doctors">
+						
 						<li>
+							
+
 							<a href="/employees/create">Add Doctor</a>
 						</li>
 						<li>
 							<a href="/employees">All Doctors</a>
+
 						</li>
 						
 					</ul>
@@ -110,13 +131,16 @@
 						<li>
 							<a href="/appointments">All Appointments</a>
 						</li>
-						
+
+					
+
 					</ul>
 				</li>
 				
 			
 			
 				
+
 				<!-- <li>
 					<a href="#nav-maps" data-toggle="collapse" aria-expanded="false">
 						<span class="ti-location-pin"></span> Maps
@@ -132,6 +156,7 @@
 				</li> -->
 				
 				
+
 			
 			</ul>
 			<div class="nav-help animated fadeIn">
@@ -150,7 +175,11 @@
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
-                    <a href="index-2.html"><img src="../control/images/logo-dark.png" class="logo" alt="logo"></a>
+
+                    <a href="index-2.html"><img src="../../control/images/logo-dark.png" class="logo" alt="logo"></a>
+
+						
+
 					</div>
 					<ul class="nav">
 						<li class="nav-item">
@@ -174,7 +203,11 @@
 										<div class="modal-body">
 											<form>
 												<div class="form-group">
+
 													<input type="text" class="form-control" id="search-term" placeholder="Type text here">
+
+													<input type="text" class="form-../../control" id="search-term" placeholder="Type text here">
+
 													<button type="button" class="btn btn-lorvens proclinic-bg">
 														<span class="ti-location-arrow"></span> Search</button>
 												</div>
@@ -218,6 +251,7 @@
 				
 				</div>
 			</nav>
+
 			<!-- /Top Navigation -->
 			<!-- Breadcrumb -->
 			<!-- Page Title -->
@@ -232,10 +266,18 @@
 			  @yield('home')
 
 			</div>
+			@yield("edit&show")
 			<!-- /Main Content -->
 		</div>
 		<!-- /Page Content -->
 	</div>
+
+			
+
+
+			
+		
+
 	<!-- Back to Top -->
 	<a id="back-to-top" href="#" class="back-to-top">
 		<span class="ti-angle-up"></span>
@@ -243,63 +285,23 @@
 	<!-- /Back to Top -->
 	
 	<!-- Jquery Library-->
-	<script src="../control/js/jquery-3.2.1.min.js"></script>
+	<script src="../../control/js/jquery-3.2.1.min.js"></script>
 	<!-- Popper Library-->
-	<script src="../control/js/popper.min.js"></script>
+	<script src="../../control/js/popper.min.js"></script>
 	<!-- Bootstrap Library-->
-	<script src="../control/js/bootstrap.min.js"></script>
+	<script src="../../control/js/bootstrap.min.js"></script>
 	<!-- morris charts -->
-	<script src="../control/charts/js/raphael-min.js"></script>
-	<script src="../control/charts/js/morris.min.js"></script>
-	<script src="../control/js/custom-morris.js"></script>
+	<script src="../../control/charts/js/raphael-min.js"></script>
+	<script src="../../control/charts/js/morris.min.js"></script>
+	<script src="../../control/js/custom-morris.js"></script>
 
 	<!-- Custom Script-->
-	<script src="../control/js/custom.js"></script>
-
-	<script>
-
-		
-	// ///// disply doctors of one department 
-$(document).on('change','.department',function(){
-	
-  
-      var dept_id=$(this).val();
-
-			var div=$(this).parent();
-
-			var op="";
-
-			$.ajax({
-				type:'get',
-				url:'{!!URL::to('DoctorsOfDepartment')!!}',
-				data:{'id':dept_id},
-				success:function(data){
-					
-				
-          op+='<option value="0" selected disabled>choose doctor</option>';
-					for(var i=0;i<data.length;i++){
-           
-					op+='<option value="'+data[i].idemployee+'">'+data[i].name+'</option>';
-         
-         
-				   }
-           $('.doctor').html(" ");
-		   $('.doctor').append(op);
-
-         
-
-				
-				},
-				error:function(){
-
-				}
-			});
-	
-		});
-
-		</script>
-
+	<script src="../../control/js/custom.js"></script>
 </body>
+
+
+
+<!-- Mirrored from www.konnectplugins.com/proclinic/Vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Dec 2020 16:23:41 GMT -->
 
 
 

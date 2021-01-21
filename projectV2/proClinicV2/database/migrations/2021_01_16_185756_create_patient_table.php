@@ -20,7 +20,7 @@ class CreatePatientTable extends Migration
             $table->string('email', 100)->nullable();
             $table->string('phone', 100)->nullable();
             $table->string('password', 40)->nullable();
-            $table->date('birthdatepa')->nullable();
+            $table->integer('age')->nullable();
             $table->string('bloodtype', 100)->nullable();
             $table->string('chronicDiseases', 100)->nullable();
             $table->string('imagepatient', 100)->nullable();

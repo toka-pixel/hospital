@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Hash;
+
 use App\Models\Patient;
 use Illuminate\Http\Request;
 
@@ -19,6 +19,7 @@ class PatientController extends Controller
         $patients=Patient ::all();
         
         return view("control.allpatients",["patients"=>$patients]);
+
     }
 
     /**
@@ -29,7 +30,9 @@ class PatientController extends Controller
     public function create()
     {
         //
+
         return view("control.addpatient");
+
     }
 
     /**
@@ -66,6 +69,7 @@ class PatientController extends Controller
             "imagepatient"=>$request["filepat"]
         ]);
         return redirect(route("patients.index"));
+
     }
 
     /**
@@ -78,7 +82,7 @@ class PatientController extends Controller
     {
         //
 
-              // dd($patient["idpatient"]);
+        // dd($patient["idpatient"]);
     //    dd($patient); join('posts', 'posts.user_id', '=', 'users.id')
      // echo ($patientdetail);
         // var_dump (isset($patientdetail["name"]));
@@ -108,6 +112,7 @@ class PatientController extends Controller
         //
 
         return view("control.editpatient",["patient"=>$patient]);
+
     }
 
     /**
@@ -120,6 +125,7 @@ class PatientController extends Controller
     public function update(Request $request, Patient $patient)
     {
         //
+
         $request->validate([
             "namepat"=>"required|min:3", 
             "passwordpat"=>"required|min:3",
@@ -157,15 +163,13 @@ class PatientController extends Controller
         $patient->delete();
         return redirect(route("patients.index"));
     
-    }
 
+    }
 
     function login(Request $req)
     {
-
-    
-        $patient= Patient::where('email',$req->email)->where('password',$req->password)->first();
-       
+        $patient= Patient::where(['email'=>$req->email],['password'=>$req->password])->first();
+        // return $patient;
         if(!$patient )
         {
             echo "<script>alert('Username or password is not matched')</script>" ;
@@ -191,10 +195,9 @@ class PatientController extends Controller
         $patient->chronicDiseases=request('chronicDiseases');
         $patient->save();
 
-       
+        // return $req->email;
 
        return redirect('/logi');
     }
-
-
+    
 }

@@ -154,8 +154,8 @@
                                               
                                              
                                                 <tr>
-                                                    <td><strong>Date Of Birth</strong> </td>
-                                                    <td>{{$employee->bithdaye}}</td>
+                                                    <td><strong>Age</strong> </td>
+                                                    <td>{{$employee->age}}</td>
                                                 </tr>
                                                 <tr>
                                                     <td><strong>Email</strong></td>

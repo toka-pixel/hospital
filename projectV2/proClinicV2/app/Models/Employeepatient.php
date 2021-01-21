@@ -12,5 +12,6 @@ class Employeepatient extends Model
     protected $guarded;
     protected $table='employeepatient';
 
-    // protected $primaryKey = 'idemployee';
+
+
 }

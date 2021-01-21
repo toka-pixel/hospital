@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Session;
 
+
 class EmppatientController extends Controller
 {
     /**
@@ -42,6 +43,8 @@ class EmppatientController extends Controller
         ->get();
         $bookApp2 = json_decode($bookApp2, true);
          return view("doctorAppointment",["bookApp"=>$bookApp,'bookApp2'=>$bookApp2]);
+
+
     }
 
     /**
@@ -84,17 +87,19 @@ class EmppatientController extends Controller
      */
     public function edit($id1)
     {
-         // return $id1;
-         $empId= Session::get('employee')['idemployee'];
-         $Employeepatient = Employeepatient::join('patient', 'employeepatient.patid', '=', 'patient.idpatient')
-         ->where('employeepatient.empid',$empId)
-         ->where('employeepatient.patid',$id1)
-                ->get(['employeepatient.*', 'patient.name','patient.age']);
-             //  return $Employeepatient[0];
-              $Employeepatient=$Employeepatient[0];
-                 return view('editMedecineS',["Employeepatient"=>$Employeepatient]);
          
-         //return view("doctorAppointment",["Employeepatient"=>$Employeepatient]);
+        // return $id1;
+        $empId= Session::get('employee')['idemployee'];
+        $Employeepatient = Employeepatient::join('patient', 'employeepatient.patid', '=', 'patient.idpatient')
+        ->where('employeepatient.empid',$empId)
+        ->where('employeepatient.patid',$id1)
+               ->get(['employeepatient.*', 'patient.name','patient.age']);
+            //  return $Employeepatient[0];
+             $Employeepatient=$Employeepatient[0];
+                return view('editMedecineS',["Employeepatient"=>$Employeepatient]);
+        
+        //return view("doctorAppointment",["Employeepatient"=>$Employeepatient]);
+
     }
 
     /**
@@ -132,6 +137,8 @@ class EmppatientController extends Controller
     {
         //
     }
+
+
 
 
 

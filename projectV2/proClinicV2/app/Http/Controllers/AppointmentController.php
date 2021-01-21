@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Appointment;
+
 use App\Models\Department;
 use App\Models\Employee;
 use App\Models\Book;
@@ -11,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+
 
 use Illuminate\Http\Request;
 
@@ -23,8 +25,8 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        //
-        // $books= Book::all();
+
+
 
         $books = DB::table('book')
         ->join('patient', 'book.patid', '=', 'patient.idpatient')
@@ -43,6 +45,7 @@ class AppointmentController extends Controller
         return view("control.appointments",["books"=>$books]);
 
         
+
     }
 
     /**
@@ -54,7 +57,9 @@ class AppointmentController extends Controller
     {
         //
 
+
         return view('control.addAppointment');
+
     }
 
     /**
@@ -66,6 +71,7 @@ class AppointmentController extends Controller
     public function store(Request $request)
     {
         //
+
        // store appointment of patient in book table
 
        $appid = Appointment::where('timeapp', $request->input('time'))
@@ -94,6 +100,7 @@ class AppointmentController extends Controller
             return 'Duplicate Entry';
        
       }
+
 
 
     }
@@ -142,6 +149,7 @@ class AppointmentController extends Controller
     {
         //
     }
+
 
 
     // departments ///////////
@@ -200,4 +208,5 @@ class AppointmentController extends Controller
 
 
     
+
 }

@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>ProClinic-Bootstrap4 Hospital Admin</title>
 	<!-- Fav  Icon Link -->
-	<link rel="shortcut icon" type="control/image/png" href="images/fav.png">
+	<link rel="shortcut icon" type="control/image/png" href="control/images/fav.png">
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="control/css/bootstrap.min.css">
 	<!-- themify icons CSS -->
@@ -54,7 +54,7 @@
 		<!-- Sidebar -->
 		<nav id="sidebar" class="proclinic-bg">
 			<div class="sidebar-header">
-				<a href="index-2.html"><img src="control/images/logo.png" class="logo" alt="logo"></a>
+				<a href="/contro"><img src="control/images/logo.png" class="logo" alt="logo"></a>
 			</div>
 			<ul class="list-unstyled components">
 				<li class="active">
@@ -74,10 +74,14 @@
 					</a>
 					<ul class="collapse list-unstyled" id="nav-patients">
 						<li>
-							<a href="add-patient.html">Add Patient</a>
+							<a href="/patients/create">Add Patient</a>
 						</li>
 						<li>
-							<a href="patients.html">All Patients</a>
+
+							<a href="/patients">All Patients</a>
+
+							
+
 						</li>
 						
 					</ul>
@@ -91,9 +95,11 @@
 							<a href="/employees/create">Add Doctor</a>
 						</li>
 						<li>
+
 							<a href="/employees">All Doctors</a>
 						</li>
 					
+
 					</ul>
 				</li>
 				<li>
@@ -147,7 +153,7 @@
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
-						<a href="index-2.html"><img src="panel/images/logo-dark.png" class="logo" alt="logo"></a>
+						<a href="index-2.html"><img src="control/images/logo-dark.png" class="logo" alt="logo"></a>
 					</div>
 					<ul class="nav">
 						<li class="nav-item">
@@ -215,29 +221,19 @@
 				
 				</div>
 			</nav>
-			<!-- /Top Navigation -->
-			<!-- Breadcrumb -->
-			<!-- Page Title -->
-			<!-- <div class="row no-margin-padding">
-				<div class="col-md-6">
-					<h3 class="block-title">Quick Statistics</h3>
-				</div>
-				<div class="col-md-6">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item">
-							<a href="/control">
-								<span class="ti-home"></span>
-							</a>
-						</li>
-						<li class="breadcrumb-item active">Dashboard</li>
-					</ol>
-				</div>
-			</div> -->
+	
 			<!-- /Page Title -->
 
 			<!-- /Breadcrumb -->
 			<!-- Main Content -->
+
 			<!-- <div class="container-fluid home"> -->
+
+
+			<div class=" home">
+
+			<!-- <div class="container-fluid home"> -->
+
 
 
 			  @yield('home')

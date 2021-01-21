@@ -1,22 +1,16 @@
 <?php
-
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
 class Employee extends Model
 {
     use HasFactory;
-    protected $table='employee';
-
+    protected $table="employee";
     protected $primaryKey = 'idemployee';
+    protected $guarded;
 
     public function department(){
-
-         # select * from users where id= $this->user_id
-         return  $this->belongsTo(Department::class);
-
+    return  $this->belongsTo(Department::class);
     }
     
 }

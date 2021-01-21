@@ -23,7 +23,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
     ];
 
-    /**
+    /*
      * The application's route middleware groups.
      *
      * @var array
@@ -38,7 +38,10 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\TrimStrings::class,
+
             \App\Http\Middleware\UserAuth::class,
+            \App\Http\Middleware\EmployeeAuth::class,
+
         ],
 
         'api' => [

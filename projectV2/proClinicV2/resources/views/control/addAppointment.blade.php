@@ -10,7 +10,7 @@
 				<div class="col-md-6">
 					<ol class="breadcrumb">						
 						<li class="breadcrumb-item">
-							<a href="index-2.html">
+							<a href="/appointments">
 								<span class="ti-home"></span>
 							</a>
                         </li>
