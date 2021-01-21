@@ -37,18 +37,7 @@
 			<div class="double-bounce2"></div>
 		</div>
 	</div>
-	<!--/Pre Loader -->
-	<!-- Color Changer -->
-	<!-- <div class="theme-settings" id="switcher">
-		<span class="theme-click">
-			<span class="ti-settings"></span>
-		</span>
-		<span class="theme-color theme-default" data-color="green"></span>
-		<span class="theme-color theme-blue" data-color="blue"></span>
-		<span class="theme-color theme-red theme-active" data-color="red"></span>
-		<span class="theme-color theme-violet" data-color="violet"></span>
-		<span class="theme-color theme-yellow" data-color="yellow"></span>
-	</div> -->
+
 	<!-- /Color Changer -->
 	<div class="wrapper">
 		<!-- Sidebar -->
@@ -57,13 +46,13 @@
 				<a href="/contro"><img src="control/images/logo.png" class="logo" alt="logo"></a>
 			</div>
 			<ul class="list-unstyled components">
-				<li class="active">
+				<li>
 					<a href="#nav-dashboard" data-toggle="collapse" aria-expanded="true">
 						<span class="ti-home"></span> Dashboard
 					</a>
 					<ul class="collapse list-unstyled show" id="nav-dashboard">
 						<li>
-							<a href="/control">Vertical</a>
+							<a href="/contro">Vertical</a>
 						</li>
 						
 					</ul>
@@ -73,16 +62,7 @@
 						<span class="ti-wheelchair"></span> Patients
 					</a>
 					<ul class="collapse list-unstyled" id="nav-patients">
-						<li>
-							<a href="/patients/create">Add Patient</a>
-						</li>
-						<li>
-
-							<a href="/patients">All Patients</a>
-
-							
-
-						</li>
+						
 						
 					</ul>
 				</li>
@@ -91,14 +71,7 @@
 						<span class="ti-user"></span> Doctors
 					</a>
 					<ul class="collapse list-unstyled" id="nav-doctors">
-						<li>
-							<a href="/employees/create">Add Doctor</a>
-						</li>
-						<li>
-
-							<a href="/employees">All Doctors</a>
-						</li>
-					
+						
 
 					</ul>
 				</li>
@@ -107,18 +80,7 @@
 						<span class="ti-pencil-alt"></span> Appointments
 					</a>
 					<ul class="collapse list-unstyled" id="nav-appointment">
-						<li>
-							<a href="add-appointment.html">Add Appointment</a>
-						</li>
-						<li>
-							<a href="appointments.html">All Appointments</a>
-						</li>
-						<li>
-							<a href="about-appointment.html">Appointment Details</a>
-						</li>
-						<li>
-							<a href="edit-appointment.html">Edit Appointment</a>
-						</li>
+						
 					</ul>
 				</li>
 				
