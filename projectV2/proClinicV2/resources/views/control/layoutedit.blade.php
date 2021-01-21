@@ -126,18 +126,13 @@
 					</a>
 					<ul class="collapse list-unstyled" id="nav-appointment">
 						<li>
-							<a href="add-appointment.html">Add Appointment</a>
+							<a href="/appointments/create">Add Appointment</a>
 						</li>
 						<li>
-							<a href="appointments.html">All Appointments</a>
+							<a href="/appointments">All Appointments</a>
 						</li>
 
-						<li>
-							<a href="about-appointment.html">Appointment Details</a>
-						</li>
-						<li>
-							<a href="edit-appointment.html">Edit Appointment</a>
-						</li>
+					
 
 					</ul>
 				</li>

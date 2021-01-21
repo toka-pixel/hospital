@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employee;
-use App\Models\Department;
+ use App\Models\Department;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -198,8 +198,16 @@ class EmployeeController extends Controller
             return redirect('/emppatients');
         }
     }
-    
+
+
+
 
     
-
+    function ShowProfileDoctor($id){
+       
+        $employee=new Employee;
+        $employee= $employee->findorfail($id);
+        //  dd($employee);
+        return view('proclinic.doctorProfile', ['employee'=>$employee] );
+    }
 }

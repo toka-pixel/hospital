@@ -19,9 +19,12 @@
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "postcss-import": "^12.0.1",
+<<<<<<< HEAD:projectV2/proClinicV2/package.json
+=======
 
         "prettier": "2.2.1",
 
+>>>>>>> 8339b4b5bafd60415f14f4921a3beb1735dda3d5:laravel/package.json
         "tailwindcss": "^2.0.1"
     }
 }

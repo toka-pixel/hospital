@@ -59,7 +59,7 @@ Route::get('/doctorProfile', function () {
 
 //////////// control //////////////////
 
-Route::get('/control', function () {
+Route::get('/contro', function () {
     return view('control.home');
 });
 
@@ -80,5 +80,40 @@ Route::get('/editMedicine/{id}',[App\Http\Controllers\EmppatientController::clas
 
 
 
+// ///////// login and  signup ////////////////////
 
+Route::get('/logi', function () {
+    return view('login');
+});
+
+Route::get('/signup', function () {
+    return view('signup');
+});
+
+// Route::view('/signup','signup');
+
+Route::get('/logout', function () {
+    Session::forget('patient');
+    return redirect('logi');
+});
+
+
+
+Route::post("/logi",[App\Http\Controllers\PatientController::class,'login']);
+
+Route::post("/signup",[App\Http\Controllers\PatientController::class,'signup']);
+
+
+// ////////  display employees of one department ////////
+
+Route::get('DoctorsOfDepartment','App\Http\Controllers\AppointmentController@docofdepartment');
+
+
+////////  ShowProfileDoctor //////////////////
+
+Route::get("/doctorprofile/{id}",[App\Http\Controllers\EmployeeController::class,'ShowProfileDoctor'])->name('showdocprofile');
+
+// ////// Add Appointment From Admin /////////////
+
+Route::get("/AppFromAdmin",[App\Http\Controllers\AppointmentController::class,'AddAppointmentFromAdmin'])->name('AppFromAdmin');
 

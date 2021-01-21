@@ -19,6 +19,10 @@
 <link rel="stylesheet" href="proclinic/css/flaticon.css">
 <link rel="stylesheet" href="proclinic/css/icomoon.css">
 <link rel="stylesheet" href="proclinic/css/style.css">
+
+
+
+
 </head>
 <body>
 <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
@@ -57,7 +61,7 @@
  aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 <span class="oi oi-menu"></span> Menu
 </button>
-<p class="button-custom order-lg-last mb-0"><a href="/appointment" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
+<p class="button-custom order-lg-last mb-0"><a href="logi" class="btn btn-secondary py-2 px-3">Make An Appointment</a></p>
 <div class="collapse navbar-collapse" id="ftco-nav">
 <ul class="navbar-nav mr-auto">
 <li class="nav-item active"><a href="ProclinicHome"  class="nav-link pl-0">Home</a></li>
@@ -67,6 +71,17 @@
 
 <li class="nav-item"><a href="/blogs" class="nav-link">Blog</a></li>
 <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+@if(Session::has('patient'))
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{Session::get('patient')['name']}}
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="nav-item"><a class="nav-link" href="/logout" style='color:black'>Logout</a></li>
+            </ul>
+          </li>
+          @else
+          <li class="nav-item"><a  class="nav-link" href="/logi">Login</a></li>
+@endif
 </ul>
 </div>
 </div>
@@ -204,12 +219,133 @@ Copyright &copy;
 <script src="proclinic/js/main.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<!-- sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-23581568-13');
+
+
+
+  // make appointment 
+//   $('.confirm').on('click', function (event) {
+//     event.preventDefault();
+//     const url = $(this).attr('href');
+//     swal({
+//         title: 'Are you sure?',
+//         text: 'This record and it`s details will be permanantly deleted!',
+//         icon: 'warning',
+//         buttons: ["Cancel", "Yes!"],
+//     }).then(function(value) {
+//         if (value) {
+//             // window.location.href = url;
+//         }
+//     });
+// });
+
+</script>
+<script>
+
+
+
+
+// ///// disply doctors of one department 
+$(document).on('change','.department',function(){
+	
+  
+      var dept_id=$(this).val();
+
+			var div=$(this).parent();
+
+			var op="";
+
+			$.ajax({
+				type:'get',
+				url:'{!!URL::to('DoctorsOfDepartment')!!}',
+				data:{'id':dept_id},
+				success:function(data){
+					console.log('success');
+
+					console.log(data);
+
+					console.log(data.length);
+				
+          op+='<option value="0" selected disabled>choose doctor</option>';
+					for(var i=0;i<data.length;i++){
+           
+					op+='<option value="'+data[i].idemployee+'">'+data[i].name+'</option>';
+         
+          console.log(op);
+				   }
+           $('.doctor').html(" ");
+				   $('.doctor').append(op);
+
+          //  $('.doctor').append(op);
+
+				
+				},
+				error:function(){
+
+				}
+			});
+	
+		});
+
+   
+
+	//  /////// datepicker ///////////
+
+	var enableDays = ["24-01-2021", "27-01-2021", "29-01-2021", "31-01-2021"]
+  
+  
+
+
+
+	
+function formatDate(d) {
+  var day = String(d.getDate())
+  //add leading zero if day is is single digit
+  if (day.length == 1)
+    day = '0' + day
+  var month = String((d.getMonth()+1))
+  //add leading zero if month is is single digit
+  if (month.length == 1)
+    month = '0' + month
+  return day + "-" + month + "-" + d.getFullYear()
+
+ 
+}
+
+$(function () {
+  $("#datepicker").datepicker({ 
+        maxViewMode: 2,
+        weekStart: 1,
+        startDate: "+1d",
+        beforeShowDay: function(date){
+          if (enableDays.indexOf(formatDate(date)) < 0)
+            return {
+              enabled: false
+            }
+          else
+            return {
+              enabled: true
+            }
+        },
+        todayHighlight: true,
+        format: "dd-mm-yyyy", 
+        clearBtn: true,
+        autoclose: true
+  })
+});
+
+			
+
+
+		
 </script>
 </body>
 

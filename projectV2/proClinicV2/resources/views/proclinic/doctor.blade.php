@@ -2,6 +2,12 @@
 
 
 @section('home')
+
+<?php 
+   use App\Models\Employee;
+   use App\Models\Department;
+   $employees= Employee::all(); 
+?>
 <section class="hero-wrap hero-wrap-2" style="background-image: url('proclinic/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
 <div class="overlay"></div>
 <div class="container">
@@ -16,14 +22,26 @@
 <section class="ftco-section">
 <div class="container">
 <div class="row">
+@foreach($employees as  $employee) 
 <div class="col-md-6 col-lg-3 ftco-animate">
 <div class="staff">
 <div class="img-wrap d-flex align-items-stretch">
-<div class="img align-self-stretch" style="background-image: url(proclinic/images/doc-1.jpg);"></div>
+<img class="img align-self-stretch" src="../proclinic/images/{{$employee['image']}}">
 </div>
 <div class="text pt-3 text-center">
-<h3><a href="/doctorProfile">Dr. Lloyd Wilson</a></h3>
-<span class="position mb-2">Neurologist</span>
+<h3><a href="{{route('showdocprofile',$employee['idemployee'])}}">Dr. {{ $employee->name }} </a></h3>
+<span class="position mb-2">
+  <?php 
+     $depname = DB::table('employee')
+     ->join('department','employee.idep', '=', 'department.depid')
+     ->where('employee.idep',$employee->idep )
+     ->select('department.depname')
+     ->get()->first();
+    
+
+     echo $depname->{'depname'};
+  ?>
+</span>
 <div class="faded">
 <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
 
@@ -31,7 +49,9 @@
 </div>
 </div>
 </div>
-<div class="col-md-6 col-lg-3 ftco-animate">
+@endforeach 
+
+<!-- <div class="col-md-6 col-lg-3 ftco-animate">
 <div class="staff">
 <div class="img-wrap d-flex align-items-stretch">
 <div class="img align-self-stretch" style="background-image: url(proclinic/images/doc-2.jpg);"></div>
@@ -135,7 +155,7 @@
  </div>
 </div>
 </div>
-</div>
+</div> -->
 </div>
 </div>
 </section>

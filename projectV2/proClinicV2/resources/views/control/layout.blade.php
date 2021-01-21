@@ -108,17 +108,12 @@
 					</a>
 					<ul class="collapse list-unstyled" id="nav-appointment">
 						<li>
-							<a href="add-appointment.html">Add Appointment</a>
+							<a href="/appointments/create">Add Appointment</a>
 						</li>
 						<li>
-							<a href="appointments.html">All Appointments</a>
+							<a href="/appointments">All Appointments</a>
 						</li>
-						<li>
-							<a href="about-appointment.html">Appointment Details</a>
-						</li>
-						<li>
-							<a href="edit-appointment.html">Edit Appointment</a>
-						</li>
+					
 					</ul>
 				</li>
 				
@@ -226,30 +221,14 @@
 				
 				</div>
 			</nav>
-			<!-- /Top Navigation -->
-			<!-- Breadcrumb -->
-			<!-- Page Title -->
-
-			<!-- <div class="row no-margin-padding">
-				<div class="col-md-6">
-					<h3 class="block-title">Quick Statistics</h3>
-				</div>
-				<div class="col-md-6">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item">
-							<a href="/control">
-								<span class="ti-home"></span>
-							</a>
-						</li>
-						<li class="breadcrumb-item active">Dashboard</li>
-					</ol>
-				</div>
-			</div> -->
-
+	
 			<!-- /Page Title -->
 
 			<!-- /Breadcrumb -->
 			<!-- Main Content -->
+
+			<!-- <div class="container-fluid home"> -->
+
 
 			<div class=" home">
 

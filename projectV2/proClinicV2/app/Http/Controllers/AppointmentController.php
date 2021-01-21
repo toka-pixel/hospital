@@ -3,6 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Appointment;
+
+use App\Models\Department;
+use App\Models\Employee;
+use App\Models\Book;
+use App\Models\Employeepatient;
+use Illuminate\Support\Facades\DB;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
+
+
 use Illuminate\Http\Request;
 
 class AppointmentController extends Controller
@@ -14,7 +25,27 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        //
+
+
+
+        $books = DB::table('book')
+        ->join('patient', 'book.patid', '=', 'patient.idpatient')
+        ->join('employee', 'book.empid', '=', 'employee.idemployee')
+        ->join('appointment', 'appointment.appid', '=', 'book.idapp')
+
+        // ->join( 'employeepatient','employeepatient.patid' ,'=','book.patid')
+        // ->where('employeepatient.empid','book.empid')
+
+        ->join('department','employee.idep','=','department.depid')
+       
+        ->select('patient.name as patientname', 'employee.name','appointment.timeapp', 'appointment.dateapp','department.depname')
+        ->get();
+       
+        $books = json_decode( $books, true);
+        return view("control.appointments",["books"=>$books]);
+
+        
+
     }
 
     /**
@@ -25,6 +56,10 @@ class AppointmentController extends Controller
     public function create()
     {
         //
+
+
+        return view('control.addAppointment');
+
     }
 
     /**
@@ -36,6 +71,38 @@ class AppointmentController extends Controller
     public function store(Request $request)
     {
         //
+
+       // store appointment of patient in book table
+
+       $appid = Appointment::where('timeapp', $request->input('time'))
+       ->where('dateapp', $request->input('date'))
+       ->get();
+
+
+       try {
+
+        Book::updateOrCreate([
+            "empid"=>$request->input('doctor'),
+            "patid"=>$request["patid"],
+            "idapp"=>$appid[0]->appid
+        ]);
+        Employeepatient::updateOrCreate([
+            "empid"=>$request->input('doctor'),
+            "patid"=>$request["patid"],
+             "state"=>"Active"
+        ]);
+
+
+       return view('proclinic.appointment');
+      } catch (Illuminate\Database\QueryException $e){
+        $errorCode = $e->errorInfo[1];
+    
+            return 'Duplicate Entry';
+       
+      }
+
+
+
     }
 
     /**
@@ -82,4 +149,64 @@ class AppointmentController extends Controller
     {
         //
     }
+
+
+
+    // departments ///////////
+
+
+    public  function docofdepartment(Request $request) {
+       
+
+        $data=Employee::select('name','idemployee')->where('idep',$request->id)->get();
+        return response()->json($data);//then sent this data to ajax success
+
+    }
+
+
+    // add appointment from admin /////////
+
+    public function AddAppointmentFromAdmin(Request $request){
+
+        $appid = Appointment::where('timeapp', $request->input('time'))
+        ->where('dateapp', $request->input('date'))
+        ->get();
+ 
+     
+      
+ 
+        // $book2 = new Book;
+        // $book2->empid=$request->input('doctor');
+        // $book2->patid=$request->input('patid');
+        // $book2->idapp=$appid[0]->appid;
+
+        // $book2->save();
+
+        //    dd( $book2);
+
+        Book::updateOrCreate([
+            "empid"=>$request->input('doctor'),
+            "patid"=>$request["patid"],
+            "idapp"=>$appid[0]->appid
+        ]);
+
+       
+         $y=Employeepatient::updateOrCreate([
+             "empid"=>$request->input('doctor'),
+             "patid"=>$request->input("patid"),
+              "state"=>"Active"
+         ]);
+
+         
+    
+         return redirect(route("appointments.index"));
+ 
+        // return view('control.appointments');
+
+
+    }
+
+
+    
+
 }

@@ -165,5 +165,39 @@ class PatientController extends Controller
     
 
     }
+
+    function login(Request $req)
+    {
+        $patient= Patient::where(['email'=>$req->email],['password'=>$req->password])->first();
+        // return $patient;
+        if(!$patient )
+        {
+            echo "<script>alert('Username or password is not matched')</script>" ;
+            return view('login');
+        }
+        else{
+            $req->session()->put('patient',$patient);
+            return redirect('/');
+        }
+    }
+
+   
+    function signup(Request $req)
+    {
+        $patient= new Patient;
+
+        $patient->name=request('name');
+        $patient->email=request('email');
+        $patient->password=request('password');
+        $patient->address=request('address');
+        $patient->phone=request('phone');
+        $patient->bloodtype=request('bloodtype');
+        $patient->chronicDiseases=request('chronicDiseases');
+        $patient->save();
+
+        // return $req->email;
+
+       return redirect('/logi');
+    }
     
 }

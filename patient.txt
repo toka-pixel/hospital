@@ -1,0 +1,179 @@
+                                           | Illuminate\Routing\Middleware\SubstituteBindings          |
+|        | POST      | patients                         | patients.store                  | App\Http\Controllers\PatientController@store                                    | App\Http\Middleware\EncryptCookies                        |
+|        |           |                                  |                                 |
+                                           | Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse   |
+|        |           |                                  |                                 |
+                                           | Illuminate\Session\Middleware\StartSession                |
+|        |           |                                  |                                 |
+                                           | Laravel\Jetstream\Http\Middleware\AuthenticateSession     |
+|        |           |                                  |                                 |
+                                           | Illuminate\View\Middleware\ShareErrorsFromSession         |
+|        |           |                                  |                                 |
+                                           | App\Http\Middleware\VerifyCsrfToken                       |
+|        |           |                                  |                                 |
+                                           | Illuminate\Routing\Middleware\SubstituteBindings          |
+|        | GET|HEAD  | patients                         | patients.index                  | App\Http\Controllers\PatientController@index                                    | App\Http\Middleware\EncryptCookies                        |
+|        |           |                                  |                                 |
+                                           | Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse   |
+|        |           |                                  |                                 |
+                                           | Illuminate\Session\Middleware\StartSession                |
+|        |           |                                  |                                 |
+                                           | Laravel\Jetstream\Http\Middleware\AuthenticateSession     |
+|        |           |                                  |                                 |
+                                           | Illuminate\View\Middleware\ShareErrorsFromSession         |
+|        |           |                                  |                                 |
+                                           | App\Http\Middleware\VerifyCsrfToken                       |
+|        |           |                                  |                                 |
+                                           | Illuminate\Routing\Middleware\SubstituteBindings          |
+|        | GET|HEAD  | patients/create                  | patients.create                 | App\Http\Controllers\PatientController@create                                   | App\Http\Middleware\EncryptCookies                        |
+|        |           |                                  |                                 |
+                                           | Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse   |
+|        |           |                                  |                                 |
+                                           | Illuminate\Session\Middleware\StartSession                |
+|        |           |                                  |                                 |
+                                           | Laravel\Jetstream\Http\Middleware\AuthenticateSession     |
+|        |           |                                  |                                 |
+                                           | Illuminate\View\Middleware\ShareErrorsFromSession         |
+|        |           |                                  |                                 |
+                                           | App\Http\Middleware\VerifyCsrfToken                       |
+|        |           |                                  |                                 |
+                                           | Illuminate\Routing\Middleware\SubstituteBindings          |
+|        | DELETE    | patients/{patient}               | patients.destroy                | App\Http\Controllers\PatientController@destroy                                  | App\Http\Middleware\EncryptCookies                        |
+|        |           |                                  |                                 |
+                                           | Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse   |
+|        |           |                                  |                                 |
+                                           | Illuminate\Session\Middleware\StartSession                |
+|        |           |                                  |                                 |
+                                           | Laravel\Jetstream\Http\Middleware\AuthenticateSession     |
+|        |           |                                  |                                 |
+                                           | Illuminate\View\Middleware\ShareErrorsFromSession         |
+|        |           |                                  |                                 |
+                                           | App\Http\Middleware\VerifyCsrfToken                       |
+|        |           |                                  |                                 |
+                                           | Illuminate\Routing\Middleware\SubstituteBindings          |
+|        | GET|HEAD  | patients/{patient}               | patients.show                   | App\Http\Controllers\PatientController@show                                     | App\Http\Middleware\EncryptCookies                        |
+|        |           |                                  |                                 |
+                                           | Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse   |
+|        |           |                                  |                                 |
+                                           | Illuminate\Session\Middleware\StartSession                |
+|        |           |                                  |                                 |
+                                           | Laravel\Jetstream\Http\Middleware\AuthenticateSession     |
+|        |           |                                  |                                 |
+                                           | Illuminate\View\Middleware\ShareErrorsFromSession         |
+|        |           |                                  |                                 |
+                                           | App\Http\Middleware\VerifyCsrfToken                       |
+|        |           |                                  |                                 |
+                                           | Illuminate\Routing\Middleware\SubstituteBindings          |
+|        | PUT|PATCH | patients/{patient}               | patients.update                 | App\Http\Controllers\PatientController@update                                   | App\Http\Middleware\EncryptCookies                        |
+|        |           |                                  |                                 |
+                                           | Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse   |
+|        |           |                                  |                                 |
+                                           | Illuminate\Session\Middleware\StartSession                |
+|        |           |                                  |                                 |
+                                           | Laravel\Jetstream\Http\Middleware\AuthenticateSession     |
+|        |           |                                  |                                 |
+                                           | Illuminate\View\Middleware\ShareErrorsFromSession         |
+|        |           |                                  |                                 |
+                                           | App\Http\Middleware\VerifyCsrfToken                       |
+|        |           |                                  |                                 |
+                                           | Illuminate\Routing\Middleware\SubstituteBindings          |
+|        | GET|HEAD  | patients/{patient}/edit          | patients.edit                   | App\Http\Controllers\PatientController@edit     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+@extends('control.layout')
+
+
+@section('patients')
+	
+	
+	
+		
+	<div class="row">
+					
+					<div class="col-md-12">
+						<div class="widget-area-2 proclinic-box-shadow">
+							<h3 class="widget-title">Patients List</h3>							
+							<div class="table-responsive mb-3">
+								<table id="tableId" class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th class="no-sort">
+												<div class="custom-control custom-checkbox">
+													<input class="custom-control-input" type="checkbox" id="select-all">
+													<label class="custom-control-label" for="select-all"></label>
+												</div>
+											</th>
+											<th>fname</th>
+											<th>lname</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+									@foreach($patients as $patient)
+										<tr>
+											<td>
+												<div class="custom-control custom-checkbox">
+													<input class="custom-control-input" type="checkbox" id="">
+													<label class="custom-control-label" for="" ></label>
+												</div>
+											</td>
+											<td>{{$patient['fname']}}</td>
+                                             <td>{{$patient['lname']}}</td>
+											
+											<td>
+												<span class="badge badge-success">Completed</span>
+											</td>
+										</tr>
+										@endforeach
+									</tbody>
+								</table>
+								<!--Export links-->
+								<nav aria-label="Page navigation example">
+									<ul class="pagination justify-content-center export-pagination">
+										<li class="page-item">
+											<a class="page-link" href="#"><span class="ti-download"></span> csv</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#"><span class="ti-printer"></span>  print</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#"><span class="ti-file"></span> PDF</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#"><span class="ti-align-justify"></span> Excel</a>
+										</li>
+									</ul>
+								</nav>
+								<!-- /Export links-->
+								<button type="button" class="btn btn-danger mt-3 mb-0"><span class="ti-trash"></span> DELETE</button>
+								<button type="button" class="btn btn-primary mt-3 mb-0"><span class="ti-pencil-alt"></span> EDIT</button>
+							</div>
+						</div>
+					</div>
+					<!-- /Widget Item -->
+				</div>
+
+@endsection
+
+                                

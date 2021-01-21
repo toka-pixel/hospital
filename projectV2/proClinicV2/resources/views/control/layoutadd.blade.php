@@ -19,6 +19,8 @@
 	<link rel="stylesheet" href="../control/css/animate.css">
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="../control/css/styles.css">
+
+
 	<link rel="stylesheet" href="../control/css/red.css" id="style_theme">
 	<link rel="stylesheet" href="../control/css/responsive.css">
 	<!-- morris charts -->
@@ -89,10 +91,10 @@
 					</a>
 					<ul class="collapse list-unstyled" id="nav-doctors">
 						<li>
-							<a href="">Add Doctor</a>
+							<a href="/employees/create">Add Doctor</a>
 						</li>
 						<li>
-							<a href="">All Doctors</a>
+							<a href="/employees">All Doctors</a>
 						</li>
 						
 					</ul>
@@ -103,17 +105,12 @@
 					</a>
 					<ul class="collapse list-unstyled" id="nav-appointment">
 						<li>
-							<a href="add-appointment.html">Add Appointment</a>
+							<a href="/appointments/create">Add Appointment</a>
 						</li>
 						<li>
-							<a href="appointments.html">All Appointments</a>
+							<a href="/appointments">All Appointments</a>
 						</li>
-						<li>
-							<a href="about-appointment.html">Appointment Details</a>
-						</li>
-						<li>
-							<a href="edit-appointment.html">Edit Appointment</a>
-						</li>
+						
 					</ul>
 				</li>
 				
@@ -258,8 +255,52 @@
 
 	<!-- Custom Script-->
 	<script src="../control/js/custom.js"></script>
+
+	<script>
+
+		
+	// ///// disply doctors of one department 
+$(document).on('change','.department',function(){
+	
+  
+      var dept_id=$(this).val();
+
+			var div=$(this).parent();
+
+			var op="";
+
+			$.ajax({
+				type:'get',
+				url:'{!!URL::to('DoctorsOfDepartment')!!}',
+				data:{'id':dept_id},
+				success:function(data){
+					
+				
+          op+='<option value="0" selected disabled>choose doctor</option>';
+					for(var i=0;i<data.length;i++){
+           
+					op+='<option value="'+data[i].idemployee+'">'+data[i].name+'</option>';
+         
+         
+				   }
+           $('.doctor').html(" ");
+		   $('.doctor').append(op);
+
+         
+
+				
+				},
+				error:function(){
+
+				}
+			});
+	
+		});
+
+		</script>
+
 </body>
 
 
-<!-- Mirrored from www.konnectplugins.com/proclinic/Vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Dec 2020 16:23:41 GMT -->
+
 </html>

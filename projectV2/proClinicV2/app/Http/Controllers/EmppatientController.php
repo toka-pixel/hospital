@@ -44,6 +44,7 @@ class EmppatientController extends Controller
         $bookApp2 = json_decode($bookApp2, true);
          return view("doctorAppointment",["bookApp"=>$bookApp,'bookApp2'=>$bookApp2]);
 
+
     }
 
     /**
@@ -86,6 +87,7 @@ class EmppatientController extends Controller
      */
     public function edit($id1)
     {
+         
         // return $id1;
         $empId= Session::get('employee')['idemployee'];
         $Employeepatient = Employeepatient::join('patient', 'employeepatient.patid', '=', 'patient.idpatient')
@@ -97,6 +99,7 @@ class EmppatientController extends Controller
                 return view('editMedecineS',["Employeepatient"=>$Employeepatient]);
         
         //return view("doctorAppointment",["Employeepatient"=>$Employeepatient]);
+
     }
 
     /**
@@ -134,4 +137,10 @@ class EmppatientController extends Controller
     {
         //
     }
+
+
+
+
+
+
 }

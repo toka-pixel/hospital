@@ -14,4 +14,5 @@ class Patient extends Model
     protected $primaryKey = 'idpatient';
     
 
+
 }
