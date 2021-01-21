@@ -10,7 +10,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>ProClinic-Bootstrap4 Hospital Admin</title>
 	<!-- Fav  Icon Link -->
+
 	<link rel="shortcut icon" type="../../control/image/png" href="../../control/images/fav.png">
+
+	<link rel="shortcut icon" type="../../control/image/png" href="images/fav.png">
+
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="../../control/css/bootstrap.min.css">
 	<!-- themify icons CSS -->
@@ -19,6 +23,9 @@
 	<link rel="stylesheet" href="../../control/css/animate.css">
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="../../control/css/styles.css">
+
+
+
 	<link rel="stylesheet" href="../../control/css/red.css" id="style_theme">
 	<link rel="stylesheet" href="../../control/css/responsive.css">
 	<!-- morris charts -->
@@ -37,6 +44,7 @@
 			<div class="double-bounce2"></div>
 		</div>
 	</div>
+
 	<!--/Pre Loader -->
 	<!-- Color Changer -->
 	<!-- <div class="theme-settings" id="switcher">
@@ -50,11 +58,16 @@
 		<span class="theme-color theme-yellow" data-color="yellow"></span>
 	</div> -->
 	<!-- /Color Changer -->
+
 	<div class="wrapper">
 		<!-- Sidebar -->
 		<nav id="sidebar" class="proclinic-bg">
 			<div class="sidebar-header">
+
 				<a href="/contro"><img src="../../control/images/logo.png" class="logo" alt="logo"></a>
+
+				
+
 			</div>
 			<ul class="list-unstyled components">
 				<li class="active">
@@ -63,7 +76,11 @@
 					</a>
 					<ul class="collapse list-unstyled show" id="nav-dashboard">
 						<li>
-							<a href="/contro">Vertical</a>
+
+							
+
+							<a href="/../../control">Vertical</a>
+
 						</li>
 						
 					</ul>
@@ -74,10 +91,13 @@
 					</a>
 					<ul class="collapse list-unstyled" id="nav-patients">
 						<li>
+
 							<a href="/patients/create">Add Patient</a>
 						</li>
+						
 						<li>
-							<a href="/patients">All Patients</a>
+							<a href="/employees">All Patients</a>
+
 						</li>
 						
 					</ul>
@@ -87,11 +107,15 @@
 						<span class="ti-user"></span> Doctors
 					</a>
 					<ul class="collapse list-unstyled" id="nav-doctors">
+						
 						<li>
-							<a href="">Add Doctor</a>
+							
+
+							<a href="/employees/create">Add Doctor</a>
 						</li>
 						<li>
-							<a href="">All Doctors</a>
+							<a href="/employees">All Doctors</a>
+
 						</li>
 						
 					</ul>
@@ -107,18 +131,21 @@
 						<li>
 							<a href="appointments.html">All Appointments</a>
 						</li>
+
 						<li>
 							<a href="about-appointment.html">Appointment Details</a>
 						</li>
 						<li>
 							<a href="edit-appointment.html">Edit Appointment</a>
 						</li>
+
 					</ul>
 				</li>
 				
 			
 			
 				
+
 				<!-- <li>
 					<a href="#nav-maps" data-toggle="collapse" aria-expanded="false">
 						<span class="ti-location-pin"></span> Maps
@@ -134,6 +161,7 @@
 				</li> -->
 				
 				
+
 			
 			</ul>
 			<div class="nav-help animated fadeIn">
@@ -152,7 +180,11 @@
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
+
                     <a href="index-2.html"><img src="../../control/images/logo-dark.png" class="logo" alt="logo"></a>
+
+						
+
 					</div>
 					<ul class="nav">
 						<li class="nav-item">
@@ -176,7 +208,11 @@
 										<div class="modal-body">
 											<form>
 												<div class="form-group">
+
 													<input type="text" class="form-control" id="search-term" placeholder="Type text here">
+
+													<input type="text" class="form-../../control" id="search-term" placeholder="Type text here">
+
 													<button type="button" class="btn btn-lorvens proclinic-bg">
 														<span class="ti-location-arrow"></span> Search</button>
 												</div>
@@ -220,6 +256,7 @@
 				
 				</div>
 			</nav>
+
 			<!-- /Top Navigation -->
 			<!-- Breadcrumb -->
 			<!-- Page Title -->
@@ -234,10 +271,18 @@
 			  @yield('home')
 
 			</div>
+			@yield("edit&show")
 			<!-- /Main Content -->
 		</div>
 		<!-- /Page Content -->
 	</div>
+
+			
+
+
+			
+		
+
 	<!-- Back to Top -->
 	<a id="back-to-top" href="#" class="back-to-top">
 		<span class="ti-angle-up"></span>
@@ -260,5 +305,9 @@
 </body>
 
 
+
 <!-- Mirrored from www.konnectplugins.com/proclinic/Vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Dec 2020 16:23:41 GMT -->
+
+
+
 </html>

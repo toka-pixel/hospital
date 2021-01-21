@@ -15,9 +15,11 @@ class PatientController extends Controller
     public function index()
     {
         //
+
         $patients=Patient ::all();
         
         return view("control.allpatients",["patients"=>$patients]);
+
     }
 
     /**
@@ -28,7 +30,9 @@ class PatientController extends Controller
     public function create()
     {
         //
+
         return view("control.addpatient");
+
     }
 
     /**
@@ -40,6 +44,7 @@ class PatientController extends Controller
     public function store(Request $request)
     {
         //
+
         $request->validate([
             "namepat"=>"required|min:3", 
             "passwordpat"=>"required|min:3",
@@ -64,6 +69,7 @@ class PatientController extends Controller
             "imagepatient"=>$request["filepat"]
         ]);
         return redirect(route("patients.index"));
+
     }
 
     /**
@@ -75,6 +81,7 @@ class PatientController extends Controller
     public function show(Patient $patient)
     {
         //
+
         // dd($patient["idpatient"]);
     //    dd($patient); join('posts', 'posts.user_id', '=', 'users.id')
      // echo ($patientdetail);
@@ -91,6 +98,7 @@ class PatientController extends Controller
        
 
         return view("control.showpatient",["patient"=>$patient,"patientdetail"=>$patientdetail]);
+
     }
 
     /**
@@ -102,7 +110,9 @@ class PatientController extends Controller
     public function edit(Patient $patient)
     {
         //
+
         return view("control.editpatient",["patient"=>$patient]);
+
     }
 
     /**
@@ -115,6 +125,7 @@ class PatientController extends Controller
     public function update(Request $request, Patient $patient)
     {
         //
+
         $request->validate([
             "namepat"=>"required|min:3", 
             "passwordpat"=>"required|min:3",
@@ -136,6 +147,7 @@ class PatientController extends Controller
             "imagepatient"=>$request["filepat"]
         ]);
         return redirect(route("patients.index"));
+
     }
 
     /**
@@ -147,8 +159,11 @@ class PatientController extends Controller
     public function destroy(Patient $patient)
     {
         //
+
         $patient->delete();
         return redirect(route("patients.index"));
     
+
     }
+    
 }

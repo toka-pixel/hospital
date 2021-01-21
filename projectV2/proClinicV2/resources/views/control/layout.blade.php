@@ -63,7 +63,7 @@
 					</a>
 					<ul class="collapse list-unstyled show" id="nav-dashboard">
 						<li>
-							<a href="/contro">Vertical</a>
+							<a href="/control">Vertical</a>
 						</li>
 						
 					</ul>
@@ -77,7 +77,11 @@
 							<a href="/patients/create">Add Patient</a>
 						</li>
 						<li>
+
 							<a href="/patients">All Patients</a>
+
+							
+
 						</li>
 						
 					</ul>
@@ -88,12 +92,14 @@
 					</a>
 					<ul class="collapse list-unstyled" id="nav-doctors">
 						<li>
-							<a href="add-doctor.html">Add Doctor</a>
+							<a href="/employees/create">Add Doctor</a>
 						</li>
 						<li>
-							<a href="doctors.html">All Doctors</a>
+
+							<a href="/employees">All Doctors</a>
 						</li>
-						
+					
+
 					</ul>
 				</li>
 				<li>
@@ -223,17 +229,38 @@
 			<!-- /Top Navigation -->
 			<!-- Breadcrumb -->
 			<!-- Page Title -->
-			
+
+			<!-- <div class="row no-margin-padding">
+				<div class="col-md-6">
+					<h3 class="block-title">Quick Statistics</h3>
+				</div>
+				<div class="col-md-6">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item">
+							<a href="/control">
+								<span class="ti-home"></span>
+							</a>
+						</li>
+						<li class="breadcrumb-item active">Dashboard</li>
+					</ol>
+				</div>
+			</div> -->
+
 			<!-- /Page Title -->
 
 			<!-- /Breadcrumb -->
 			<!-- Main Content -->
+
 			<div class=" home">
+
+			<!-- <div class="container-fluid home"> -->
+
 
 
 			  @yield('home')
+			 
 
-			</div>
+			<!-- </div> -->
 			<!-- /Main Content -->
 		</div>
 		<!-- /Page Content -->

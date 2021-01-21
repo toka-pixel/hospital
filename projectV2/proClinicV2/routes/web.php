@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,14 +59,26 @@ Route::get('/doctorProfile', function () {
 
 //////////// control //////////////////
 
-Route::get('/contro', function () {
+Route::get('/control', function () {
     return view('control.home');
 });
-use App\Http\Controllers;
-Route::resource("patients",Controllers\PatientController::class);
+
+//resource controller for employee
 Route::resource("employees",Controllers\EmployeeController::class);
+Route::resource("patients",Controllers\PatientController::class);
 Route::resource("appointments",Controllers\AppointmentController::class);
 Route::resource("books",Controllers\BookController::class);
 Route::resource("emppatients",Controllers\EmppatientController::class);
+//login Admin
+Route::get('/loginEmp', function () {
+    return view('loginEmp');
+});
+Route::post("/loginEmp",[App\Http\Controllers\EmployeeController::class,'loginEmp']);
+Route::get('/editMedicine/{id}',[App\Http\Controllers\EmppatientController::class,'edit'] )->name('editMedecine');
+
+
+
+
+
 
 
