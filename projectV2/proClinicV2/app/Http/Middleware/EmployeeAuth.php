@@ -18,8 +18,8 @@ class EmployeeAuth
     {
         // if($request->path()=="loginEmp" && $request->session()->has('employee'))
         // {
-        //     return redirect('/appointment');
-        // }
+        //     return redirect('/emppatients');
+        // }else{return redirect('/loginEmp');}
         return $next($request);
     }
 }

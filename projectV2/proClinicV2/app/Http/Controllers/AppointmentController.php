@@ -94,7 +94,8 @@ class AppointmentController extends Controller
 
 
        return view('proclinic.appointment');
-      } catch (Illuminate\Database\QueryException $e){
+      }
+       catch (Illuminate\Database\QueryException $e){
         $errorCode = $e->errorInfo[1];
     
             return 'Duplicate Entry';

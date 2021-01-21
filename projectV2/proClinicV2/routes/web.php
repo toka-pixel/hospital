@@ -75,7 +75,7 @@ Route::get('/loginEmp', function () {
 });
 Route::post("/loginEmp",[App\Http\Controllers\EmployeeController::class,'loginEmp']);
 Route::get('/editMedicine/{id}',[App\Http\Controllers\EmppatientController::class,'edit'] )->name('editMedecine');
-
+// Route::post("/loginEmp",[App\Http\Controllers\EmployeeController::class,'loginAdmin']);
 
 
 
@@ -117,3 +117,8 @@ Route::get("/doctorprofile/{id}",[App\Http\Controllers\EmployeeController::class
 
 Route::get("/AppFromAdmin",[App\Http\Controllers\AppointmentController::class,'AddAppointmentFromAdmin'])->name('AppFromAdmin');
 
+//logout Emp
+Route::get('/logoutEmp', function () {
+    Session::forget('employee');
+    return redirect('loginEmp');
+});

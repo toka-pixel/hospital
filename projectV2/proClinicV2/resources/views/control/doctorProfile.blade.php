@@ -38,8 +38,7 @@
                                             <p class="card-text">{{$employee["skills"]}}</p>
                                             <a type="button" class="btn btn-success mb-2" href='{{route("employees.edit",$employee)}}'>
                                             <span class="ti-pencil-alt"></span> Edit Doctor</a>
-                                            <button type="button" class="btn btn-danger"><span class="ti-trash"></span> Delete
-                                                Doctor</button>
+                                           
                                         </div>
                                     </div>
                                 </div>

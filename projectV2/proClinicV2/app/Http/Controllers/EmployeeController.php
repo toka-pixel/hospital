@@ -6,6 +6,7 @@ use App\Models\Employee;
  use App\Models\Department;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Session;
 
 class EmployeeController extends Controller
 {
@@ -185,19 +186,28 @@ class EmployeeController extends Controller
     function loginEmp(Request $req)
     {
         $employee= Employee::where('email',$req->email)->where('password',$req->password)->where('job','doctor')->first();
+        $admin= Employee::where('email',$req->email)->where('password',$req->password)->where('job','admin')->first();
         // return $employee;
         
-        if(!$employee )
+        if(!$employee&&$admin)
         {
-            echo '<script>alert("email or password is not matched")</script>'; 
-           return view('loginEmp');
+            $req->session()->put('admin',$admin);
+            return redirect('/contro');
            
-        }
-        else{
+        }elseif($employee&&!$admin){
             $req->session()->put('employee',$employee);
             return redirect('/emppatients');
         }
+        else{
+            echo '<script>alert("email or password is not matched")</script>'; 
+            return view('loginEmp');
+        }
     }
+
+    
+      
+   
+    
 
 
 

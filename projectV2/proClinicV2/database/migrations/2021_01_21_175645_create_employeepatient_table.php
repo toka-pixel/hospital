@@ -18,8 +18,8 @@ class CreateEmployeepatientTable extends Migration
             $table->integer('patid')->index('patid');
             $table->string('state', 100)->nullable();
             $table->string('medicine', 100)->nullable();
-            $table->primary(['empid', 'patid']);
             $table->timestamps();
+            $table->primary(['empid', 'patid']);
         });
     }
 
