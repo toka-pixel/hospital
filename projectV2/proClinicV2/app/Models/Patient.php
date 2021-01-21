@@ -9,4 +9,9 @@ class Patient extends Model
 {
     use HasFactory;
     protected $table='patient';
+
+    protected $guarded;
+    protected $primaryKey = 'idpatient';
+    
+
 }

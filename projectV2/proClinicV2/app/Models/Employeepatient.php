@@ -9,6 +9,8 @@ class Employeepatient extends Model
 {
     use HasFactory;
     protected $table='employeepatient';
+
     // protected $primaryKey = (['empid', 'patid']);
     //  protected $primaryKey= array('empid', 'patid');
+
 }

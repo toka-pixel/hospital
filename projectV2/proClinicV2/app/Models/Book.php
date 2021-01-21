@@ -9,6 +9,5 @@ class Book extends Model
 {
     use HasFactory;
     protected $table='book';
-   
-    
+
 }

@@ -62,6 +62,7 @@ Route::get('/doctorProfile', function () {
 Route::get('/control', function () {
     return view('control.home');
 });
+
 //resource controller for employee
 Route::resource("employees",Controllers\EmployeeController::class);
 Route::resource("patients",Controllers\PatientController::class);
@@ -74,6 +75,7 @@ Route::get('/loginEmp', function () {
 });
 Route::post("/loginEmp",[App\Http\Controllers\EmployeeController::class,'loginEmp']);
 Route::get('/editMedicine/{id}',[App\Http\Controllers\EmppatientController::class,'edit'] )->name('editMedecine');
+
 
 
 

@@ -19,7 +19,6 @@
 	<link rel="stylesheet" href="../control/css/animate.css">
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="../control/css/styles.css">
-
 	<link rel="stylesheet" href="../control/css/red.css" id="style_theme">
 	<link rel="stylesheet" href="../control/css/responsive.css">
 	<!-- morris charts -->
@@ -55,7 +54,7 @@
 		<!-- Sidebar -->
 		<nav id="sidebar" class="proclinic-bg">
 			<div class="sidebar-header">
-				<a href="index-2.html"><img src="../control/images/logo.png" class="logo" alt="logo"></a>
+				<a href="/contro"><img src="../control/images/logo.png" class="logo" alt="logo"></a>
 			</div>
 			<ul class="list-unstyled components">
 				<li class="active">
@@ -64,7 +63,7 @@
 					</a>
 					<ul class="collapse list-unstyled show" id="nav-dashboard">
 						<li>
-							<a href="/../control">Vertical</a>
+							<a href="/contro">Vertical</a>
 						</li>
 						
 					</ul>
@@ -75,11 +74,12 @@
 					</a>
 					<ul class="collapse list-unstyled" id="nav-patients">
 						<li>
-							<a href="add-patient.html">Add Patient</a>
+							<a href="/patients/create">Add Patient</a>
 						</li>
 						<li>
-							<a href="patients.html">All Patients</a>
+							<a href="/patients">All Patients</a>
 						</li>
+						
 						
 					</ul>
 				</li>
@@ -89,10 +89,10 @@
 					</a>
 					<ul class="collapse list-unstyled" id="nav-doctors">
 						<li>
-							<a href="/employees/create">Add Doctor</a>
+							<a href="">Add Doctor</a>
 						</li>
 						<li>
-							<a href="/employees">All Doctors</a>
+							<a href="">All Doctors</a>
 						</li>
 						
 					</ul>
@@ -108,14 +108,31 @@
 						<li>
 							<a href="appointments.html">All Appointments</a>
 						</li>
-						
+						<li>
+							<a href="about-appointment.html">Appointment Details</a>
+						</li>
+						<li>
+							<a href="edit-appointment.html">Edit Appointment</a>
+						</li>
 					</ul>
 				</li>
 				
 			
 			
 				
-			
+				<!-- <li>
+					<a href="#nav-maps" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-location-pin"></span> Maps
+					</a>
+					<ul class="collapse list-unstyled" id="nav-maps">
+						<li>
+							<a href="map-1.html">Google Maps</a>
+						</li>
+						<li>
+							<a href="map-2.html">Vector Maps</a>
+						</li>
+					</ul>
+				</li> -->
 				
 				
 			
@@ -136,7 +153,7 @@
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
-						<a href="index-2.html"><img src="control/images/logo-dark.png" class="logo" alt="logo"></a>
+                    <a href="index-2.html"><img src="../control/images/logo-dark.png" class="logo" alt="logo"></a>
 					</div>
 					<ul class="nav">
 						<li class="nav-item">
@@ -160,7 +177,7 @@
 										<div class="modal-body">
 											<form>
 												<div class="form-group">
-													<input type="text" class="form-../control" id="search-term" placeholder="Type text here">
+													<input type="text" class="form-control" id="search-term" placeholder="Type text here">
 													<button type="button" class="btn btn-lorvens proclinic-bg">
 														<span class="ti-location-arrow"></span> Search</button>
 												</div>
@@ -204,13 +221,20 @@
 				
 				</div>
 			</nav>
+			<!-- /Top Navigation -->
+			<!-- Breadcrumb -->
+			<!-- Page Title -->
 			
+			<!-- /Page Title -->
+
+			<!-- /Breadcrumb -->
+			<!-- Main Content -->
+			<div class=" home">
 
 
 			  @yield('home')
-			 
 
-			<!-- </div> -->
+			</div>
 			<!-- /Main Content -->
 		</div>
 		<!-- /Page Content -->
@@ -237,5 +261,5 @@
 </body>
 
 
-
+<!-- Mirrored from www.konnectplugins.com/proclinic/Vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Dec 2020 16:23:41 GMT -->
 </html>

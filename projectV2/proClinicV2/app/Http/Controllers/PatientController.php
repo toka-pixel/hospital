@@ -15,6 +15,11 @@ class PatientController extends Controller
     public function index()
     {
         //
+
+        $patients=Patient ::all();
+        
+        return view("control.allpatients",["patients"=>$patients]);
+
     }
 
     /**
@@ -25,6 +30,9 @@ class PatientController extends Controller
     public function create()
     {
         //
+
+        return view("control.addpatient");
+
     }
 
     /**
@@ -36,6 +44,32 @@ class PatientController extends Controller
     public function store(Request $request)
     {
         //
+
+        $request->validate([
+            "namepat"=>"required|min:3", 
+            "passwordpat"=>"required|min:3",
+            "agepat"=>"numeric",
+            "phonepat"=>"required",
+            "emailpat"=>"required|email",
+            "chronpat"=>"required",
+            "addresspat"=>"required",
+            "filepat"=>"required"
+            
+        ]);
+        Patient::create([
+            "name"=>$request["namepat"],
+            "password"=>$request["passwordpat"],
+            "age"=>$request["agepat"],
+            "phone"=>$request["phonepat"],
+            "email"=>$request["emailpat"],
+            "chronicDiseases"=>$request["chronpat"],
+            "bloodtype"=>$request["bloodpat"],
+            "gender"=>$request["genderpat"],
+            "address"=>$request["addresspat"],
+            "imagepatient"=>$request["filepat"]
+        ]);
+        return redirect(route("patients.index"));
+
     }
 
     /**
@@ -47,6 +81,24 @@ class PatientController extends Controller
     public function show(Patient $patient)
     {
         //
+
+        // dd($patient["idpatient"]);
+    //    dd($patient); join('posts', 'posts.user_id', '=', 'users.id')
+     // echo ($patientdetail);
+        // var_dump (isset($patientdetail["name"]));
+        // echo ($patientdetail[0]["name"]);
+        $patientdetail=Patient:: join ('employeepatient' ,'employeepatient.patid','=','patient.idpatient')
+        ->join ('employee','employee.idemployee','=','employeepatient.empid')
+        
+        ->join('book','employee.idemployee','=','book.empid') 
+        ->join ('appointment','book.idapp','=','appointment.appid')
+        ->where ('patient.idpatient',$patient["idpatient"])
+        ->where ('book.patid',$patient["idpatient"])
+        ->get (['employee.name','employeepatient.medicine','employeepatient.state','appointment.dateapp']);
+       
+
+        return view("control.showpatient",["patient"=>$patient,"patientdetail"=>$patientdetail]);
+
     }
 
     /**
@@ -58,6 +110,9 @@ class PatientController extends Controller
     public function edit(Patient $patient)
     {
         //
+
+        return view("control.editpatient",["patient"=>$patient]);
+
     }
 
     /**
@@ -70,6 +125,29 @@ class PatientController extends Controller
     public function update(Request $request, Patient $patient)
     {
         //
+
+        $request->validate([
+            "namepat"=>"required|min:3", 
+            "passwordpat"=>"required|min:3",
+            "agepat"=>"numeric",
+            "phonepat"=>"required",
+            "emailpat"=>"required|email",
+            "genderpat"=>"required",
+            "addresspat"=>"required",
+            "filepat"=>"required"
+            
+        ]);
+        $patient->update([
+            "name"=>$request["namepat"],
+            "password"=>$request["passwordpat"],
+            "age"=>$request["agepat"],
+            "phone"=>$request["phonepat"],
+            "email"=>$request["emailpat"],
+            "address"=>$request["addresspat"],
+            "imagepatient"=>$request["filepat"]
+        ]);
+        return redirect(route("patients.index"));
+
     }
 
     /**
@@ -81,5 +159,11 @@ class PatientController extends Controller
     public function destroy(Patient $patient)
     {
         //
+
+        $patient->delete();
+        return redirect(route("patients.index"));
+    
+
     }
+    
 }
