@@ -37,18 +37,7 @@
 			<div class="double-bounce2"></div>
 		</div>
 	</div>
-	<!--/Pre Loader -->
-	<!-- Color Changer -->
-	<!-- <div class="theme-settings" id="switcher">
-		<span class="theme-click">
-			<span class="ti-settings"></span>
-		</span>
-		<span class="theme-color theme-default" data-color="green"></span>
-		<span class="theme-color theme-blue" data-color="blue"></span>
-		<span class="theme-color theme-red theme-active" data-color="red"></span>
-		<span class="theme-color theme-violet" data-color="violet"></span>
-		<span class="theme-color theme-yellow" data-color="yellow"></span>
-	</div> -->
+	
 	<!-- /Color Changer -->
 	<div class="wrapper">
 		<!-- Sidebar -->
@@ -213,7 +202,7 @@
 									<span class="ti-settings"></span> Settings</a>
 								<a class="dropdown-item" href="#">
 									<span class="ti-help-alt"></span> Help</a>
-								<a class="dropdown-item" href="#">
+								<a class="dropdown-item" href="/logoutAdmin">
 									<span class="ti-power-off"></span> Logout</a>
 							</div>
 						</li>

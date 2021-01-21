@@ -122,3 +122,7 @@ Route::get('/logoutEmp', function () {
     Session::forget('employee');
     return redirect('loginEmp');
 });
+Route::get('/logoutAdmin', function () {
+    Session::forget('admin');
+    return redirect('loginEmp');
+});

@@ -6,7 +6,7 @@
 <?php 
    use App\Models\Employee;
    use App\Models\Department;
-   $employees= Employee::all(); 
+   $employees= Employee::all()->where('job','doctor' ); 
 ?>
 <section class="hero-wrap hero-wrap-2" style="background-image: url('proclinic/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
 <div class="overlay"></div>

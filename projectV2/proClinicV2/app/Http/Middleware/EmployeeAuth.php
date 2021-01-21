@@ -16,10 +16,16 @@ class EmployeeAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        // if($request->path()=="loginEmp" && $request->session()->has('employee'))
+        if($request->path()=="emppatients" && !$request->session()->has('employee'))
+        {
+            return redirect('/loginEmp');
+        }
+        // if($request->path()=="contro"||$request->path()=="employees" && !$request->session()->has('admin'))
         // {
-        //     return redirect('/emppatients');
-        // }else{return redirect('/loginEmp');}
+        //     return redirect('/loginEmp');
+        // }
+
+        //else{return redirect('/loginEmp');}
         return $next($request);
     }
 }
