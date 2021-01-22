@@ -44,7 +44,7 @@
   ?>
 </span>
 <div class="faded">
-<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+<p>{{ $employee->skills }}</p>
 
 </div>
 </div>

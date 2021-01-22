@@ -20,7 +20,7 @@
 <div class="heading-section heading-section-white ftco-animate mb-5">
 <span class="subheading">APPOINTEMENT</span>
 <h2 class="mb-4">BOOK APPOINTEMENT</h2>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<p>Choose your appropriate doctor and appointment.</p>
 </div>
 <form action="{{route('appointments.store')}}" method='POST' class="appointment-form ftco-animate">
 @csrf
