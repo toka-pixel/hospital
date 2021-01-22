@@ -91,7 +91,7 @@
 <div class="col-md-8 text-center heading-section ftco-animate">
 <span class="subheading">Testimonials</span>
 <h2 class="mb-4">Our Patients Says About Us</h2>
-<p>Magrabi Hospitals & Centers accommodate over one million patients every year. Get to know their inspiring convalesce journeys</p>
+<p>PROCLINIC Hospitals & Centers accommodate over one million patients every year. Get to know their inspiring convalesce journeys</p>
 </div>
 </div>
 <div class="row ftco-animate justify-content-center">
@@ -172,7 +172,7 @@
 </div>
 </div>
 </section>
-<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="background-image: url(proclinic/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+<!-- <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="background-image: url(proclinic/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
 <div class="container">
 <div class="row">
 <div class="col-md-6 py-5 pr-md-5">
@@ -273,5 +273,5 @@
 </div>
 </div>
 </div>
-</section>
+</section> -->
 @endsection
