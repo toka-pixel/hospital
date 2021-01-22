@@ -78,45 +78,47 @@ class AppointmentController extends Controller
        ->where('dateapp', $request->input('date'))
        ->get();
 
+       $allbooks=Book::all()->where('idapp',$appid[0]->appid)->where('empid',$request->input('doctor'));
+     
+   
+      
 
-       try {
-
-        Book::updateOrCreate([
-            "empid"=>$request->input('doctor'),
-            "patid"=>$request["patid"],
-            "idapp"=>$appid[0]->appid
-        ]);
-        Employeepatient::updateOrCreate([
-            "empid"=>$request->input('doctor'),
-            "patid"=>$request["patid"],
-             "state"=>"Active"
-        ]);
+       if(count($allbooks) > 0){
+           echo "<script>alert('appointment is reserved')</script>";
+       }
 
 
-       return view('proclinic.appointment');
-      }
-       catch (Illuminate\Database\QueryException $e){
-        $errorCode = $e->errorInfo[1];
+       else
+       {
+
+        try {
+
+            Book::updateOrCreate([
+                "empid"=>$request->input('doctor'),
+                "patid"=>$request["patid"],
+                "idapp"=>$appid[0]->appid
+            ]);
+            Employeepatient::updateOrCreate([
+                "empid"=>$request->input('doctor'),
+                "patid"=>$request["patid"],
+                 "state"=>"Active"
+            ]);
     
-            return 'Duplicate Entry';
-       
-      }
+    
+          
+          } catch (Illuminate\Database\QueryException $e){
+            $errorCode = $e->errorInfo[1];
+        
+                return 'Duplicate Entry';
+           
+          }
+       }
 
+      
+       return view('proclinic.appointment');
 
 
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Appointment  $appointment
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Appointment $appointment)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      *

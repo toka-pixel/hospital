@@ -67,11 +67,11 @@
 				</form>
 				<div class="text-center p-t-115">
 						<span class="txt1">
-							Don’t have an account?
+							Forgot Password?
 						</span>
 
-						<a class="txt2" href="/signup">
-							Sign Up
+						<a class="txt2" href="#">
+							Check with Admin
 						</a>
 					</div>
 			</div>
