@@ -26,8 +26,8 @@
 </div>
 </a>
 <div class="text bg-white p-4">
-<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<h3 class="heading"><a href="#">PROCLINIC & Centers accommodate over one million patients every year.</a></h3>
+<p> Get to know their inspiring convalesce journeys.</p>
 <div class="d-flex align-items-center mt-4">
 <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
 <p class="ml-auto mb-0">
@@ -48,8 +48,8 @@
 </div>
 </a>
 <div class="text bg-white p-4">
-<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<h3 class="heading"><a href="#">Mr. Christopher was admitted into PROCLINIC</a></h3>
+<p> Upon subsequent investigation, a Partial Retinal Detachment was detected and the required surgery is undertaken.</p>
 <div class="d-flex align-items-center mt-4">
 <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
 <p class="ml-auto mb-0">
@@ -66,12 +66,12 @@
 <div class="meta-date text-center p-2">
 <span class="day">23</span>
 <span class="mos">January</span>
-<span class="yr">2019</span>
+<span class="yr">2021</span>
 </div>
 </a>
 <div class="text bg-white p-4">
-<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<h3 class="heading"><a href="#"> You Don’t Get Enough Sleep or don't sleep at all!</a></h3>
+<p>Read more about Your Diagonis, Let our doctors help you find out why These things happen to you.</p>
 <div class="d-flex align-items-center mt-4">
 <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
 <p class="ml-auto mb-0">
@@ -86,14 +86,14 @@
 <div class="blog-entry">
 <a href="#" class="block-20" style="background-image: url('proclinic/images/image_4.jpg');">
 <div class="meta-date text-center p-2">
-<span class="day">23</span>
+<span class="day">10</span>
 <span class="mos">January</span>
-<span class="yr">2019</span>
+<span class="yr">2021</span>
 </div>
 </a>
 <div class="text bg-white p-4">
-<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<h3 class="heading"><a href="#">Issues such as Retinal Detachment </a></h3>
+<p>Diabetic Retinopathy and more can be treated through laserprocedures and surgical operations.</p>
 <div class="d-flex align-items-center mt-4">
 <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
 <p class="ml-auto mb-0">
