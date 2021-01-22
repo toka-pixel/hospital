@@ -47,13 +47,11 @@
 			</div>
 			<ul class="list-unstyled components">
 				<li>
-					<a href="#nav-dashboard" data-toggle="collapse" aria-expanded="true">
+					<a href="#" data-toggle="collapse" aria-expanded="false">
 						<span class="ti-home"></span> Dashboard
 					</a>
 					<ul class="collapse list-unstyled show" id="nav-dashboard">
-						<li>
-							<a href="/contro">Vertical</a>
-						</li>
+						
 						
 					</ul>
 				</li>
@@ -192,21 +190,7 @@
 			<!-- Breadcrumb -->
 			<!-- Page Title -->
 
-			<!-- <div class="row no-margin-padding">
-				<div class="col-md-6">
-					<h3 class="block-title">Quick Statistics</h3>
-				</div>
-				<div class="col-md-6">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item">
-							<a href="/control">
-								<span class="ti-home"></span>
-							</a>
-						</li>
-						<li class="breadcrumb-item active">Dashboard</li>
-					</ol>
-				</div>
-			</div> -->
+			
 
 			<!-- /Page Title -->
 

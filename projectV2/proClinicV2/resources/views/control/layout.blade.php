@@ -52,7 +52,7 @@
 					</a>
 					<ul class="collapse list-unstyled show" id="nav-dashboard">
 						<li>
-							<a href="/control">Vertical</a>
+							<a href="/contro">Vertical</a>
 						</li>
 						
 					</ul>

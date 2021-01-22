@@ -2,7 +2,7 @@
 <html>
 
 
-<!-- Mirrored from www.konnectplugins.com/proclinic/Vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Dec 2020 16:23:41 GMT -->
+
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 	<meta charset="utf-8">
@@ -59,13 +59,10 @@
 			</div>
 			<ul class="list-unstyled components">
 				<li>
-					<a href="#nav-dashboard" data-toggle="collapse" aria-expanded="true">
+					<a href="#" data-toggle="collapse" aria-expanded="false">
 						<span class="ti-home"></span> Dashboard
 					</a>
-					<ul class="collapse list-unstyled show" id="nav-dashboard">
-						
-						
-					</ul>
+					
 				</li>
 				<li>
 					<a href="#nav-patients" data-toggle="collapse" aria-expanded="false">
@@ -247,7 +244,7 @@
 
 
 
-<!-- Mirrored from www.konnectplugins.com/proclinic/Vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Dec 2020 16:23:41 GMT -->
+
 
 
 

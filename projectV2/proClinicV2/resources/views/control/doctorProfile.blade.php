@@ -118,7 +118,7 @@
                                             <td>{{$bookApp["name"]}}</td>
                                             <td>{{$bookApp["dateapp"]}}</td>
                                             <td>{{$bookApp["timeapp"]}}</td>
-                                            <td>{{$bookApp["state"]}}</td>
+                                            <td><span class="badge badge-warning">{{$bookApp["state"]}}</span></td>
                                         </tr>
                                         @endforeach
                                     </tbody>

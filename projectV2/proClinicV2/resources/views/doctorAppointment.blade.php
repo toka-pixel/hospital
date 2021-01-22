@@ -43,7 +43,7 @@
                                             <td>{{$bookApp["name"]}}</td>
                                             <td>{{$bookApp["dateapp"]}}</td>
                                             <td>{{$bookApp["timeapp"]}}</td>
-                                            <td>{{$bookApp["state"]}}</td>
+                                            <td ><span class="badge badge-warning">{{$bookApp["state"]}}</span></td>
                                             <td>
                                
 								<a type="button" class="btn btn-primary mt-0 mb-0"
@@ -83,7 +83,7 @@
                                             <td>{{$bookApp2["name"]}}</td>
                                             <td>{{$bookApp2["dateapp"]}}</td>
                                             <td>{{$bookApp2["timeapp"]}}</td>
-                                            <td>{{$bookApp2["state"]}}</td>
+                                            <td><span class="badge badge-success">{{$bookApp2["state"]}}</span></td>
                                             <td>{{$bookApp2["medicine"]}}</td>
                                         </tr>
                                         @endforeach
