@@ -50,7 +50,7 @@
 											<th>Time</th>
 											<th>Date</th>
 											<th>Department</th>
-										
+										    <th>status</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -65,10 +65,19 @@
 											<td>{{$book['depname']}}</td>
 										
 											
+											@if($book['state']=='Done')
+                                              <td><span class='badge badge-success'>Done </span></td>
+											
+											@else
+
+									
+											<td><span class='badge badge-warning'>Active </span></td>
+											@endif
+											
 										
                                         </tr>
 
-                                        @endforeach
+                                           @endforeach
                                    
                                      
 									</tbody>

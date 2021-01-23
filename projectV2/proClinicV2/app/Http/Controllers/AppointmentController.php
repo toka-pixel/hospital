@@ -32,19 +32,23 @@ class AppointmentController extends Controller
         ->join('patient', 'book.patid', '=', 'patient.idpatient')
         ->join('employee', 'book.empid', '=', 'employee.idemployee')
         ->join('appointment', 'appointment.appid', '=', 'book.idapp')
-
-        // ->join( 'employeepatient','employeepatient.patid' ,'=','book.patid')
-        // ->where('employeepatient.empid','book.empid')
+         
+        ->join("employeepatient",function($join){
+            $join->on("employeepatient.patid","=","book.patid")
+                ->on("employeepatient.empid","=","book.empid");
+        })
+      
 
         ->join('department','employee.idep','=','department.depid')
        
-        ->select('patient.name as patientname', 'employee.name','appointment.timeapp', 'appointment.dateapp','department.depname')
+        ->select('patient.name as patientname', 'employee.name','appointment.timeapp', 'appointment.dateapp','department.depname','employeepatient.state')
         ->get();
        
         $books = json_decode( $books, true);
         return view("control.appointments",["books"=>$books]);
 
         
+       
 
     }
 
@@ -78,7 +82,7 @@ class AppointmentController extends Controller
        ->where('dateapp', $request->input('date'))
        ->get();
 
-       $allbooks=Book::all()->where('idapp',$appid[0]->appid)->where('empid',$request->input('doctor'));
+    $allbooks=Book::all()->where('idapp',$appid[0]->appid)->where('empid',$request->input('doctor'));
      
    
       
@@ -91,34 +95,51 @@ class AppointmentController extends Controller
        else
        {
 
-        try {
+       
+        $x = Employeepatient::where('empid', $request->input('doctor'))
+        ->where('patid', $request["patid"])
+        ->get();
 
-            Book::updateOrCreate([
-                "empid"=>$request->input('doctor'),
-                "patid"=>$request["patid"],
-                "idapp"=>$appid[0]->appid
-            ]);
-            Employeepatient::updateOrCreate([
-                "empid"=>$request->input('doctor'),
-                "patid"=>$request["patid"],
-                 "state"=>"Active"
-            ]);
-    
-    
+                    if(count($x) > 0){
+                        echo "<script>alert('you already reserved')</script>";
+                    }
+
+
+                    else{
+                        Book::updateOrCreate([
+                            "empid"=>$request->input('doctor'),
+                            "patid"=>$request["patid"],
+                            "idapp"=>$appid[0]->appid
+                        ]);
+                        Employeepatient::updateOrCreate([
+                            "empid"=>$request->input('doctor'),
+                            "patid"=>$request["patid"],
+                            "state"=>"Active"
+                        ]);
+                
+                        }
+
+           }
           
-          } catch (Illuminate\Database\QueryException $e){
-            $errorCode = $e->errorInfo[1];
-        
-                return 'Duplicate Entry';
-           
-          }
-       }
+         
 
       
        return view('proclinic.appointment');
 
 
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Appointment  $appointment
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Appointment $appointment)
+    {
+        //
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -128,6 +149,8 @@ class AppointmentController extends Controller
     public function edit(Appointment $appointment)
     {
         //
+        
+        
     }
 
     /**
@@ -137,9 +160,12 @@ class AppointmentController extends Controller
      * @param  \App\Models\Appointment  $appointment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Appointment $appointment)
+    public function update(Request $request, Employeepatient $employeepatient)
     {
         //
+
+       
+      
     }
 
     /**
@@ -171,43 +197,67 @@ class AppointmentController extends Controller
 
     public function AddAppointmentFromAdmin(Request $request){
 
+      
         $appid = Appointment::where('timeapp', $request->input('time'))
         ->where('dateapp', $request->input('date'))
         ->get();
  
-     
+        $allbooks=Book::all()->where('idapp',$appid[0]->appid)->where('empid',$request->input('doctor'));
       
- 
-        // $book2 = new Book;
-        // $book2->empid=$request->input('doctor');
-        // $book2->patid=$request->input('patid');
-        // $book2->idapp=$appid[0]->appid;
-
-        // $book2->save();
-
-        //    dd( $book2);
-
-        Book::updateOrCreate([
-            "empid"=>$request->input('doctor'),
-            "patid"=>$request["patid"],
-            "idapp"=>$appid[0]->appid
-        ]);
-
+    
        
-         $y=Employeepatient::updateOrCreate([
-             "empid"=>$request->input('doctor'),
-             "patid"=>$request->input("patid"),
-              "state"=>"Active"
-         ]);
+ 
+        if(count($allbooks) > 0){
+            echo "<script>
+                
+            </script>";
+            echo "<script>alert('appointment is reserved')</script>";
+        }
+ 
+ 
+        else
+        {
+ 
+        
+         $x = Employeepatient::where('empid', $request->input('doctor'))
+         ->where('patid', $request["patid"])
+         ->get();
+ 
+                     if(count($x) > 0){
+                         
+                         echo "<script>alert('you already reserved')</script>";
+                     }
+ 
+ 
+                     else{
+                         Book::updateOrCreate([
+                             "empid"=>$request->input('doctor'),
+                             "patid"=>$request["patid"],
+                             "idapp"=>$appid[0]->appid
+                         ]);
+                         Employeepatient::updateOrCreate([
+                             "empid"=>$request->input('doctor'),
+                             "patid"=>$request["patid"],
+                             "state"=>"Active"
+                         ]);
 
-         
+                     
+                 
+                         }
+ 
+            }
+           
+          
     
          return redirect(route("appointments.index"));
  
-        // return view('control.appointments');
+    
 
 
     }
+
+
+  
 
 
     
