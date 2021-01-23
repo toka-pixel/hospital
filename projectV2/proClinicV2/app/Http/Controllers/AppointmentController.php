@@ -208,9 +208,9 @@ class AppointmentController extends Controller
        
  
         if(count($allbooks) > 0){
-            echo "<script>
+          
                 
-            </script>";
+           
             echo "<script>alert('appointment is reserved')</script>";
         }
  
