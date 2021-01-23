@@ -92,14 +92,14 @@
 </div>
 </div>
 <div class="pl-md-5 ml-md-5 mb-5">
-<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word.</p>
+<p>A well-known medical history, skilled physicians, latest technologies and vast medical history with guaranteed international standards welcomes Eye, Dental and ENT patients. Magrabi Hospitals & Centers, where experience meets technology.</p>
 <div class="row mt-5 pt-2">
 <div class="col-lg-6">
 <div class="services-2 d-flex">
 <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-first-aid-kit"></span></div>
 <div class="text">
 <h3>Primary Care</h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+<p>day-to-day healthcare given by a health care provider.</p>
 </div>
 </div>
 </div>
@@ -108,7 +108,7 @@
 <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-dropper"></span></div>
 <div class="text">
 <h3>Lab Test</h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+<p>Complete Blood Count. This test, also known as a CBC.</p>
 </div>
 </div>
 </div>
@@ -117,7 +117,7 @@
 <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-experiment-results"></span></div>
 <div class="text">
 <h3>Symptom Check</h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+<p>understand symptoms and possible signs of illness, causes and complications.</p>
 </div>
 </div>
 </div>
@@ -126,7 +126,7 @@
 <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-heart-rate"></span></div>
 <div class="text">
 <h3>Heart Rate</h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+<p>most basic monitors show your heart rate, blood pressure.</p>
 </div>
 </div>
 </div>
@@ -439,7 +439,7 @@ Tilt table test.</p>
 <div class="col-md-8 text-center heading-section ftco-animate">
 <span class="subheading">Testimonials</span>
 <h2 class="mb-4">Our Patients Says About Us</h2>
-<p>Magrabi Hospitals & Centers accommodate over one million patients every year. Get to know their inspiring convalesce journeys</p>
+<p>PROCLINIC & Centers accommodate over one million patients every year. Get to know their inspiring convalesce journeys</p>
 </div>
 </div>
 <div class="row ftco-animate justify-content-center">
@@ -544,8 +544,8 @@ Tilt table test.</p>
 </div>
 </a>
 <div class="text bg-white p-4">
-<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<h3 class="heading"><a href="#"> You Don’t Get Enough Sleep,Don't Know the problem</a></h3>
+<p>A well-known medical history, skilled physicians, latest technologies and vast medical history with guaranteed </p>
 <div class="d-flex align-items-center mt-4">
 <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
 <p class="ml-auto mb-0">
