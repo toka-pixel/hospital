@@ -39,7 +39,7 @@
 </div>
 <div class="media-body p-2 mt-3">
 <h3 class="heading">Qualitfied Doctors</h3>
-<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+<p>The hospital has been equipped with the latest regulations and modern .The Emergency Department is staffed by a team of highly qualified doctors.</p>
 </div>
 </div>
 </div>
@@ -50,7 +50,7 @@
 </div>
 <div class="media-body p-2 mt-3">
 <h3 class="heading">Emergency Care</h3>
-<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+<p>specialty that is concerned with the initial assessment,  diagnosis and treatment of individuals with acute illness and injury.</p>
 </div>
 </div>
 </div>
